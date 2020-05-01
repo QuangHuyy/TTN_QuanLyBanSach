@@ -50,7 +50,7 @@
             // 
             // checkedListBox1
             // 
-            this.checkedListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.checkedListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
@@ -62,7 +62,7 @@
             "Dịch giả",
             "Nhà xuất bản",
             "Năm xuất bản"});
-            this.checkedListBox1.Location = new System.Drawing.Point(89, 160);
+            this.checkedListBox1.Location = new System.Drawing.Point(101, 157);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(217, 193);
             this.checkedListBox1.TabIndex = 0;
@@ -166,21 +166,21 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(523, 216);
+            this.textBox1.Location = new System.Drawing.Point(472, 267);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 5;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(690, 216);
+            this.textBox2.Location = new System.Drawing.Point(648, 267);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 6;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(856, 216);
+            this.textBox3.Location = new System.Drawing.Point(810, 267);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 22);
             this.textBox3.TabIndex = 7;
@@ -189,17 +189,16 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(580, 141);
+            this.label4.Location = new System.Drawing.Point(516, 199);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(248, 25);
+            this.label4.Size = new System.Drawing.Size(452, 25);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Tìm tối đa theo 3 tiêu chí";
-            
+            this.label4.Text = "tối đa theo 3 tiêu chí ( nhập thông tin cần tìm )";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(485, 141);
+            this.button1.Location = new System.Drawing.Point(405, 196);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 28);
             this.button1.TabIndex = 9;
@@ -210,8 +209,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1439, 656);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(1025, 654);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox3);
