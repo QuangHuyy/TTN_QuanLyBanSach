@@ -8,6 +8,7 @@ namespace QLBanSach
 {
     static class Program
     {
+        public static DBAcess da = new DBAcess();
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

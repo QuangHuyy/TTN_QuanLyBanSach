@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.listbox = new System.Windows.Forms.CheckedListBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,20 +40,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.texttim1 = new System.Windows.Forms.TextBox();
+            this.texttim2 = new System.Windows.Forms.TextBox();
+            this.texttim3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btntimkiem = new System.Windows.Forms.Button();
+            this.Tenseries = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // checkedListBox1
+            // listbox
             // 
-            this.checkedListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.listbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.listbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listbox.FormattingEnabled = true;
+            this.listbox.Items.AddRange(new object[] {
             "Tên sách",
             "Thể loại",
             "Tác giả",
@@ -62,10 +63,10 @@
             "Dịch giả",
             "Nhà xuất bản",
             "Năm xuất bản"});
-            this.checkedListBox1.Location = new System.Drawing.Point(101, 157);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(217, 193);
-            this.checkedListBox1.TabIndex = 0;
+            this.listbox.Location = new System.Drawing.Point(101, 157);
+            this.listbox.Name = "listbox";
+            this.listbox.Size = new System.Drawing.Size(217, 193);
+            this.listbox.TabIndex = 0;
             // 
             // dataGridView1
             // 
@@ -77,12 +78,13 @@
             this.TenDG,
             this.TenNN,
             this.TenNXB,
-            this.GiaBan});
-            this.dataGridView1.Location = new System.Drawing.Point(101, 449);
+            this.GiaBan,
+            this.Tenseries});
+            this.dataGridView1.Location = new System.Drawing.Point(114, 446);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(798, 180);
+            this.dataGridView1.Size = new System.Drawing.Size(944, 180);
             this.dataGridView1.TabIndex = 1;
             // 
             // TenSach
@@ -164,26 +166,26 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Hiển thị";
             // 
-            // textBox1
+            // texttim1
             // 
-            this.textBox1.Location = new System.Drawing.Point(472, 267);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 5;
+            this.texttim1.Location = new System.Drawing.Point(472, 267);
+            this.texttim1.Name = "texttim1";
+            this.texttim1.Size = new System.Drawing.Size(100, 22);
+            this.texttim1.TabIndex = 5;
             // 
-            // textBox2
+            // texttim2
             // 
-            this.textBox2.Location = new System.Drawing.Point(648, 267);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 6;
+            this.texttim2.Location = new System.Drawing.Point(648, 267);
+            this.texttim2.Name = "texttim2";
+            this.texttim2.Size = new System.Drawing.Size(100, 22);
+            this.texttim2.TabIndex = 6;
             // 
-            // textBox3
+            // texttim3
             // 
-            this.textBox3.Location = new System.Drawing.Point(810, 267);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 7;
+            this.texttim3.Location = new System.Drawing.Point(810, 267);
+            this.texttim3.Name = "texttim3";
+            this.texttim3.Size = new System.Drawing.Size(100, 22);
+            this.texttim3.TabIndex = 7;
             // 
             // label4
             // 
@@ -195,32 +197,40 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "tối đa theo 3 tiêu chí ( nhập thông tin cần tìm )";
             // 
-            // button1
+            // btntimkiem
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(405, 196);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 28);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "TÌM KIẾM ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btntimkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntimkiem.Location = new System.Drawing.Point(405, 196);
+            this.btntimkiem.Name = "btntimkiem";
+            this.btntimkiem.Size = new System.Drawing.Size(105, 28);
+            this.btntimkiem.TabIndex = 9;
+            this.btntimkiem.Text = "TÌM KIẾM ";
+            this.btntimkiem.UseVisualStyleBackColor = true;
+            this.btntimkiem.Click += new System.EventHandler(this.Btntimkiem_Click);
+            // 
+            // Tenseries
+            // 
+            this.Tenseries.HeaderText = "Tập";
+            this.Tenseries.MinimumWidth = 6;
+            this.Tenseries.Name = "Tenseries";
+            this.Tenseries.Width = 125;
             // 
             // FormTimKiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1025, 654);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1139, 647);
+            this.Controls.Add(this.btntimkiem);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.texttim3);
+            this.Controls.Add(this.texttim2);
+            this.Controls.Add(this.texttim1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.listbox);
             this.Name = "FormTimKiem";
             this.Text = "FormTimKiem";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -231,7 +241,7 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox listbox;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTL;
@@ -243,10 +253,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox texttim1;
+        private System.Windows.Forms.TextBox texttim2;
+        private System.Windows.Forms.TextBox texttim3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btntimkiem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tenseries;
     }
 }
