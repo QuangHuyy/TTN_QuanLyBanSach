@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textbanchay = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,12 +52,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "DANH SÁCH CÁC SÁCH BÁN CHẠY NĂM";
             // 
-            // textBox1
+            // textbanchay
             // 
-            this.textBox1.Location = new System.Drawing.Point(732, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 1;
+            this.textbanchay.Location = new System.Drawing.Point(732, 45);
+            this.textbanchay.Name = "textbanchay";
+            this.textbanchay.Size = new System.Drawing.Size(100, 22);
+            this.textbanchay.TabIndex = 1;
+            this.textbanchay.TextChanged += new System.EventHandler(this.Textbanchay_TextChanged);
             // 
             // dataGridView1
             // 
@@ -144,7 +145,7 @@
             this.ClientSize = new System.Drawing.Size(1016, 452);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textbanchay);
             this.Controls.Add(this.label1);
             this.Name = "FormBanChay";
             this.Text = "FormBanChay";
@@ -157,7 +158,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textbanchay;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTL;

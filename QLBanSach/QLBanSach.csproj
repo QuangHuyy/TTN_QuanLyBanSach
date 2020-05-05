@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBAcess.cs" />
     <Compile Include="FormBan.cs">
       <SubType>Form</SubType>
     </Compile>

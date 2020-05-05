@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Text.RegularExpressions;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,8 @@ namespace QLBanSach
         {
             dataGridView1.DataSource = null;
             dataGridView1.Refresh();
+            string patternFi = @"\d";
+            Regex myRegex = new Regex(patternFi);
             DataTable dt = new DataTable();
             DataTable dt1 = new DataTable();
             DataTable dt2 = new DataTable();
@@ -52,7 +55,7 @@ namespace QLBanSach
                     dataGridView1.DataSource = dt;
                 }else
                 {
-                    MessageBox.Show("BAN NHAP DUNG O TEXT");
+                    MessageBox.Show("BAN NHAP CHUA DUNG O TEXT");
                 }
             }
             if (listbox.GetItemChecked(1) == true && listbox.GetItemChecked(0)==false && listbox.GetItemChecked(2) == false && listbox.GetItemChecked(3) == false && listbox.GetItemChecked(4) == false && listbox.GetItemChecked(5) == false && listbox.GetItemChecked(6) == false && listbox.GetItemChecked(7) == false && texttim1.Text != null)
@@ -68,7 +71,7 @@ namespace QLBanSach
                 }
                 else
                 {
-                    MessageBox.Show("BAN NHAP DUNG O TEXT");
+                    MessageBox.Show("BAN NHAP CHUA DUNG O TEXT");
                 }
             }
             if (listbox.GetItemChecked(2) == true && listbox.GetItemChecked(0) == false && listbox.GetItemChecked(1) == false && listbox.GetItemChecked(3) == false && listbox.GetItemChecked(4) == false && listbox.GetItemChecked(5) == false && listbox.GetItemChecked(6) == false && listbox.GetItemChecked(7) == false && texttim1.Text != null)
@@ -84,7 +87,7 @@ namespace QLBanSach
                 }
                 else
                 {
-                    MessageBox.Show("BAN NHAP DUNG O TEXT");
+                    MessageBox.Show("BAN NHAP CHUA DUNG O TEXT");
                 }
             }
             if (listbox.GetItemChecked(3) == true && listbox.GetItemChecked(0) == false && listbox.GetItemChecked(2) == false && listbox.GetItemChecked(1) == false && listbox.GetItemChecked(4) == false && listbox.GetItemChecked(5) == false && listbox.GetItemChecked(6) == false && listbox.GetItemChecked(7) == false && texttim1.Text != null)
@@ -100,7 +103,7 @@ namespace QLBanSach
                 }
                 else
                 {
-                    MessageBox.Show("BAN NHAP DUNG O TEXT");
+                    MessageBox.Show("BAN NHAP CHUA DUNG O TEXT");
                 }
             }
             if (listbox.GetItemChecked(4) == true && listbox.GetItemChecked(0) == false && listbox.GetItemChecked(2) == false && listbox.GetItemChecked(3) == false && listbox.GetItemChecked(1) == false && listbox.GetItemChecked(5) == false && listbox.GetItemChecked(6) == false && listbox.GetItemChecked(7) == false && texttim1.Text != null)
@@ -116,7 +119,7 @@ namespace QLBanSach
                 }
                 else
                 {
-                    MessageBox.Show("BAN NHAP DUNG O TEXT");
+                    MessageBox.Show("BAN NHAP CHUA DUNG O TEXT");
                 }
             }
             if (listbox.GetItemChecked(5) == true && listbox.GetItemChecked(0) == false && listbox.GetItemChecked(2) == false && listbox.GetItemChecked(3) == false && listbox.GetItemChecked(4) == false && listbox.GetItemChecked(1) == false && listbox.GetItemChecked(6) == false && listbox.GetItemChecked(7) == false && texttim1.Text != null)
@@ -132,7 +135,7 @@ namespace QLBanSach
                 }
                 else
                 {
-                    MessageBox.Show("BAN NHAP DUNG O TEXT");
+                    MessageBox.Show("BAN NHAP CHUA DUNG O TEXT");
                 }
             }
             if (listbox.GetItemChecked(6) == true && listbox.GetItemChecked(0) == false && listbox.GetItemChecked(2) == false && listbox.GetItemChecked(3) == false && listbox.GetItemChecked(4) == false && listbox.GetItemChecked(5) == false && listbox.GetItemChecked(1) == false && listbox.GetItemChecked(7) == false && texttim1.Text != null)
@@ -148,23 +151,31 @@ namespace QLBanSach
                 }
                 else
                 {
-                    MessageBox.Show("BAN NHAP DUNG O TEXT");
+                    MessageBox.Show("BAN NHAP CHUA DUNG O TEXT");
                 }
             }
             if (listbox.GetItemChecked(7) == true && listbox.GetItemChecked(0) == false && listbox.GetItemChecked(2) == false && listbox.GetItemChecked(3) == false && listbox.GetItemChecked(4) == false && listbox.GetItemChecked(5) == false && listbox.GetItemChecked(6) == false && listbox.GetItemChecked(1) == false && texttim1.Text != null)
             {
                 if (texttim2.Text == null && texttim3.Text == null)
                 {
-                    string query8 = "select sach.TenSach, Theloai.TenTL, Tacgia.TenTG,DichGia.TenDG,NgonNgu.TenNN,Nhaxuatban.TenNXB, sach.giaban, series.tenseries "
-                                  + " from sach,series, theloai, tacgia, dichgia, ngonngu,nhaxuatban, theloai_sach, tacgia_sach, dichgia_sach, ngonngu_sach where "
-                                  + " sach.masach=theloai_sach.masach and theloai_sach.matl=theloai.matl and sach.masach=ngonngu_sach.masach and ngonngu_sach.mann=ngonngu.mann and sach.masach=dichgia_sach.masach and dichgia.madg=dichgia_sach.madg and sach.masach=tacgia_sach.masach and tacgia_sach.matg=tacgia.matg "
-                                  + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.namxb ='" + texttim1.Text + "'";
-                    dt7 = Program.da.readDatathroughAdapter(query8);
-                    dataGridView1.DataSource = dt7;
+                    if (myRegex.IsMatch(texttim1.Text) == true) {
+                        {
+                            string query8 = "select sach.TenSach, Theloai.TenTL, Tacgia.TenTG,DichGia.TenDG,NgonNgu.TenNN,Nhaxuatban.TenNXB, sach.giaban, series.tenseries "
+                                      + " from sach,series, theloai, tacgia, dichgia, ngonngu,nhaxuatban, theloai_sach, tacgia_sach, dichgia_sach, ngonngu_sach where "
+                                      + " sach.masach=theloai_sach.masach and theloai_sach.matl=theloai.matl and sach.masach=ngonngu_sach.masach and ngonngu_sach.mann=ngonngu.mann and sach.masach=dichgia_sach.masach and dichgia.madg=dichgia_sach.madg and sach.masach=tacgia_sach.masach and tacgia_sach.matg=tacgia.matg "
+                                      + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.namxb ='" + int.Parse(texttim1.Text) + "'";
+                            dt7 = Program.da.readDatathroughAdapter(query8);
+                            dataGridView1.DataSource = dt7;
+                        }
+                    if (myRegex.IsMatch(texttim1.Text) == false)
+                    {
+                        MessageBox.Show("BAN CHI DC NHAP SO");
+                        texttim1.Text = "";
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("BAN NHAP DUNG O TEXT");
+                    MessageBox.Show("BAN NHAP CHUA DUNG O TEXT");
                 }
             }
             if (listbox.GetItemChecked(1) == true && listbox.GetItemChecked(0) == true && listbox.GetItemChecked(2) == false && listbox.GetItemChecked(3) == false && listbox.GetItemChecked(4) == false && listbox.GetItemChecked(5) == false && listbox.GetItemChecked(6) == false && listbox.GetItemChecked(7) == false && texttim1.Text != null && texttim2.Text != null)
@@ -181,7 +192,7 @@ namespace QLBanSach
                 }
                 else
                 {
-                    MessageBox.Show("BAN NHAP DUNG O TEXT");
+                    MessageBox.Show("BAN NHAP CHUA DUNG O TEXT");
                 }
             }
             if (listbox.GetItemChecked(2) == true && listbox.GetItemChecked(0) == true && listbox.GetItemChecked(1) == false && listbox.GetItemChecked(3) == false && listbox.GetItemChecked(4) == false && listbox.GetItemChecked(5) == false && listbox.GetItemChecked(6) == false && listbox.GetItemChecked(7) == false && texttim1.Text != null && texttim2.Text != null)
@@ -198,7 +209,7 @@ namespace QLBanSach
                 }
                 else
                 {
-                    MessageBox.Show("BAN NHAP DUNG O TEXT");
+                    MessageBox.Show("BAN NHAP CHUA DUNG O TEXT");
                 }
             }
             if (listbox.GetItemChecked(3) == true && listbox.GetItemChecked(0) == true && listbox.GetItemChecked(2) == false && listbox.GetItemChecked(1) == false && listbox.GetItemChecked(4) == false && listbox.GetItemChecked(5) == false && listbox.GetItemChecked(6) == false && listbox.GetItemChecked(7) == false && texttim1.Text != null && texttim2.Text != null)
@@ -215,7 +226,7 @@ namespace QLBanSach
                 }
                 else
                 {
-                    MessageBox.Show("BAN NHAP DUNG O TEXT");
+                    MessageBox.Show("BAN NHAP CHUA DUNG O TEXT");
                 }
             }
             if (listbox.GetItemChecked(4) == true && listbox.GetItemChecked(0) == true && listbox.GetItemChecked(2) == false && listbox.GetItemChecked(3) == false && listbox.GetItemChecked(1) == false && listbox.GetItemChecked(5) == false && listbox.GetItemChecked(6) == false && listbox.GetItemChecked(7) == false && texttim1.Text != null && texttim2.Text != null)
@@ -232,7 +243,7 @@ namespace QLBanSach
                 }
                 else
                 {
-                    MessageBox.Show("BAN NHAP DUNG O TEXT");
+                    MessageBox.Show("BAN NHAP CHUA DUNG O TEXT");
                 }
             }
             if (listbox.GetItemChecked(5) == true && listbox.GetItemChecked(0) == true && listbox.GetItemChecked(2) == false && listbox.GetItemChecked(3) == false && listbox.GetItemChecked(4) == false && listbox.GetItemChecked(1) == false && listbox.GetItemChecked(6) == false && listbox.GetItemChecked(7) == false && texttim1.Text != null && texttim2.Text != null)
@@ -249,7 +260,7 @@ namespace QLBanSach
                 }
                 else
                 {
-                    MessageBox.Show("BAN NHAP DUNG O TEXT");
+                    MessageBox.Show("BAN NHAP CHUA DUNG O TEXT");
                 }
             }
             if (listbox.GetItemChecked(6) == true && listbox.GetItemChecked(0) == true && listbox.GetItemChecked(2) == false && listbox.GetItemChecked(3) == false && listbox.GetItemChecked(4) == false && listbox.GetItemChecked(5) == false && listbox.GetItemChecked(1) == false && listbox.GetItemChecked(7) == false && texttim1.Text != null && texttim2.Text != null)
@@ -266,7 +277,7 @@ namespace QLBanSach
                 }
                 else
                 {
-                    MessageBox.Show("BAN NHAP DUNG O TEXT");
+                    MessageBox.Show("BAN NHAP CHUA DUNG O TEXT");
                 }
             }
             if (listbox.GetItemChecked(7) == true && listbox.GetItemChecked(0) == true && listbox.GetItemChecked(2) == false && listbox.GetItemChecked(3) == false && listbox.GetItemChecked(4) == false && listbox.GetItemChecked(5) == false && listbox.GetItemChecked(6) == false && listbox.GetItemChecked(1) == false && texttim1.Text != null && texttim2.Text != null)
@@ -274,19 +285,43 @@ namespace QLBanSach
 
                 if (texttim3.Text == null)
                 {
-                    string query16 = "select sach.TenSach, Theloai.TenTL, Tacgia.TenTG,DichGia.TenDG,NgonNgu.TenNN,Nhaxuatban.TenNXB, sach.giaban, series.tenseries "
-                                + " from sach,series, theloai, tacgia, dichgia, ngonngu,nhaxuatban, theloai_sach, tacgia_sach, dichgia_sach, ngonngu_sach where "
-                                + " sach.masach=theloai_sach.masach and theloai_sach.matl=theloai.matl and sach.masach=ngonngu_sach.masach and ngonngu_sach.mann=ngonngu.mann and sach.masach=dichgia_sach.masach and dichgia.madg=dichgia_sach.madg and sach.masach=tacgia_sach.masach and tacgia_sach.matg=tacgia.matg "
-                                + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach ='" + texttim1.Text + "' " + " and sach.namxb ='" + texttim2.Text + "'";
-                    dt15 = Program.da.readDatathroughAdapter(query16);
-                    dataGridView1.DataSource = dt15;
-                }
+                        if (myRegex.IsMatch(texttim2.Text) == true) {  
+                            
+                                string query16 = "select sach.TenSach, Theloai.TenTL, Tacgia.TenTG,DichGia.TenDG,NgonNgu.TenNN,Nhaxuatban.TenNXB, sach.giaban, series.tenseries "
+                                    + " from sach,series, theloai, tacgia, dichgia, ngonngu,nhaxuatban, theloai_sach, tacgia_sach, dichgia_sach, ngonngu_sach where "
+                                    + " sach.masach=theloai_sach.masach and theloai_sach.matl=theloai.matl and sach.masach=ngonngu_sach.masach and ngonngu_sach.mann=ngonngu.mann and sach.masach=dichgia_sach.masach and dichgia.madg=dichgia_sach.madg and sach.masach=tacgia_sach.masach and tacgia_sach.matg=tacgia.matg "
+                                    + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach ='" + texttim1.Text + "' " + " and sach.namxb ='" + int.Parse(texttim2.Text) + "'";
+                                dt15 = Program.da.readDatathroughAdapter(query16);
+                                dataGridView1.DataSource = dt15;
+                        }
+                        if (myRegex.IsMatch(texttim2.Text) == false)
+                        {
+                            MessageBox.Show("BAN CHI DC NHAP SO");
+                            texttim2.Text = "";
+                        }
+                    }
                 else
                 {
-                    MessageBox.Show("BAN NHAP DUNG O TEXT");
+                    MessageBox.Show("BAN NHAP CHUA DUNG O TEXT");
                 }
             }
             if ( ((listbox.GetItemChecked(2) == true && listbox.GetItemChecked(3) == true) || ( listbox.GetItemChecked(2) == true && listbox.GetItemChecked(4) == true ) || ( listbox.GetItemChecked(2) == true && listbox.GetItemChecked(2) == true ) || ( listbox.GetItemChecked(5) == true && listbox.GetItemChecked(2) == true ) || (listbox.GetItemChecked(6) == true && listbox.GetItemChecked(2) == true && listbox.GetItemChecked(7) == true ) ) && texttim1.Text != null && texttim2.Text != null)
+            {
+                MessageBox.Show("BAN CHI DUOC CHON TIM THEO TEN SACH VA 1 LUA CHON KHAC !");
+            }
+            if (((listbox.GetItemChecked(4) == true && listbox.GetItemChecked(3) == true) || (listbox.GetItemChecked(3) == true && listbox.GetItemChecked(5) == true) || (listbox.GetItemChecked(3) == true && listbox.GetItemChecked(6) == true) || (listbox.GetItemChecked(3) == true && listbox.GetItemChecked(7) == true) )  && texttim1.Text != null && texttim2.Text != null)
+            {
+                MessageBox.Show("BAN CHI DUOC CHON TIM THEO TEN SACH VA 1 LUA CHON KHAC !");
+            }
+            if (((listbox.GetItemChecked(4) == true && listbox.GetItemChecked(5) == true) || (listbox.GetItemChecked(4) == true && listbox.GetItemChecked(6) == true) || (listbox.GetItemChecked(4) == true && listbox.GetItemChecked(7) == true)  ) && texttim1.Text != null && texttim2.Text != null)
+            {
+                MessageBox.Show("BAN CHI DUOC CHON TIM THEO TEN SACH VA 1 LUA CHON KHAC !");
+            }
+            if (((listbox.GetItemChecked(5) == true && listbox.GetItemChecked(6) == true) || (listbox.GetItemChecked(5) == true && listbox.GetItemChecked(7) == true)  ) && texttim1.Text != null && texttim2.Text != null)
+            {
+                MessageBox.Show("BAN CHI DUOC CHON TIM THEO TEN SACH VA 1 LUA CHON KHAC !");
+            }
+            if (((listbox.GetItemChecked(6) == true && listbox.GetItemChecked(7) == true)) && texttim1.Text != null && texttim2.Text != null)
             {
                 MessageBox.Show("BAN CHI DUOC CHON TIM THEO TEN SACH VA 1 LUA CHON KHAC !");
             }
@@ -298,10 +333,11 @@ namespace QLBanSach
                                 + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach ='" + texttim1.Text + "' " + " and theloai.tentl ='" + texttim2.Text + "' "+" and tacgia.tentg ='"+texttim3.Text+"'";
                 dt16 = Program.da.readDatathroughAdapter(query17);
                 dataGridView1.DataSource = dt16;
-                if (texttim1.Text == null || texttim2.Text == null || texttim3.Text == null)
-                {
-                    MessageBox.Show("BAN NHAP THIEU O TEXT");
-                }
+               
+            }
+            if (listbox.GetItemChecked(0) == true && listbox.GetItemChecked(1) == true && listbox.GetItemChecked(2) == true && listbox.GetItemChecked(3) == false && listbox.GetItemChecked(4) == false && listbox.GetItemChecked(5) == false && listbox.GetItemChecked(6) == false && listbox.GetItemChecked(7) == false && (texttim1.Text == null || texttim2.Text == null || texttim3.Text == null))
+            {
+                MessageBox.Show("BAN NHAP THIEU O TEXT");
             }
             if (listbox.GetItemChecked(0) == true && listbox.GetItemChecked(3) == true && listbox.GetItemChecked(4) == true && listbox.GetItemChecked(1) == false && listbox.GetItemChecked(2) == false && listbox.GetItemChecked(5) == false && listbox.GetItemChecked(6) == false && listbox.GetItemChecked(7) == false && texttim1.Text != null && texttim2.Text != null && texttim1.Text != null && texttim3.Text != null)
             {
@@ -311,10 +347,11 @@ namespace QLBanSach
                                 + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach ='" + texttim1.Text + "' " + " and ngonngu.tenn ='" + texttim2.Text + "' " + " and series.tenseries ='" + texttim3.Text + "'";
                 dt17 = Program.da.readDatathroughAdapter(query18);
                 dataGridView1.DataSource = dt17;
-                if (texttim1.Text == null || texttim2.Text == null || texttim3.Text == null)
-                {
-                    MessageBox.Show("BAN NHAP THIEU O TEXT");
-                }
+              
+            }
+            if (listbox.GetItemChecked(0) == true && listbox.GetItemChecked(3) == true && listbox.GetItemChecked(4) == true && listbox.GetItemChecked(1) == false && listbox.GetItemChecked(2) == false && listbox.GetItemChecked(5) == false && listbox.GetItemChecked(6) == false && listbox.GetItemChecked(7) == false && (texttim1.Text == null || texttim2.Text == null || texttim3.Text == null))
+            {
+                MessageBox.Show("BAN NHAP THIEU O TEXT");
             }
             if (listbox.GetItemChecked(0) == true && listbox.GetItemChecked(5) == true && listbox.GetItemChecked(6) == true && listbox.GetItemChecked(3) == false && listbox.GetItemChecked(4) == false && listbox.GetItemChecked(1) == false && listbox.GetItemChecked(2) == false && listbox.GetItemChecked(7) == false && texttim1.Text != null && texttim2.Text != null && texttim1.Text != null && texttim3.Text != null)
             {
@@ -324,12 +361,13 @@ namespace QLBanSach
                                + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach ='" + texttim1.Text + "' " + " and dichgia.tendg ='" + texttim2.Text + "' " + " and nhaxuatban.tennxb ='" + texttim3.Text + "'";
                 dt18 = Program.da.readDatathroughAdapter(query19);
                 dataGridView1.DataSource = dt18;
-                if (texttim1.Text == null || texttim2.Text == null || texttim3.Text == null)
-                {
-                    MessageBox.Show("BAN NHAP THIEU O TEXT");
-                }
+               
             }
-
+            if (listbox.GetItemChecked(0) == true && listbox.GetItemChecked(5) == true && listbox.GetItemChecked(6) == true && listbox.GetItemChecked(3) == false && listbox.GetItemChecked(4) == false && listbox.GetItemChecked(1) == false && listbox.GetItemChecked(2) == false && listbox.GetItemChecked(7) == false && (texttim1.Text == null || texttim2.Text == null || texttim3.Text == null))
+            {
+                MessageBox.Show("BAN NHAP THIEU O TEXT");
+            }
+            
 
         }
     }

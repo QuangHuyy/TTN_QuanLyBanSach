@@ -37,6 +37,7 @@
             this.TenNN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tenseries = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,7 +46,8 @@
             this.texttim3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btntimkiem = new System.Windows.Forms.Button();
-            this.Tenseries = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +65,7 @@
             "Dịch giả",
             "Nhà xuất bản",
             "Năm xuất bản"});
-            this.listbox.Location = new System.Drawing.Point(101, 157);
+            this.listbox.Location = new System.Drawing.Point(101, 199);
             this.listbox.Name = "listbox";
             this.listbox.Size = new System.Drawing.Size(217, 193);
             this.listbox.TabIndex = 0;
@@ -80,7 +82,7 @@
             this.TenNXB,
             this.GiaBan,
             this.Tenseries});
-            this.dataGridView1.Location = new System.Drawing.Point(114, 446);
+            this.dataGridView1.Location = new System.Drawing.Point(114, 525);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -136,6 +138,13 @@
             this.GiaBan.Name = "GiaBan";
             this.GiaBan.Width = 125;
             // 
+            // Tenseries
+            // 
+            this.Tenseries.HeaderText = "Tập";
+            this.Tenseries.MinimumWidth = 6;
+            this.Tenseries.Name = "Tenseries";
+            this.Tenseries.Width = 125;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -160,7 +169,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(109, 403);
+            this.label3.Location = new System.Drawing.Point(109, 474);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 25);
             this.label3.TabIndex = 4;
@@ -208,19 +217,35 @@
             this.btntimkiem.UseVisualStyleBackColor = true;
             this.btntimkiem.Click += new System.EventHandler(this.Btntimkiem_Click);
             // 
-            // Tenseries
+            // label5
             // 
-            this.Tenseries.HeaderText = "Tập";
-            this.Tenseries.MinimumWidth = 6;
-            this.Tenseries.Name = "Tenseries";
-            this.Tenseries.Width = 125;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(98, 149);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(258, 18);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "( Tìm được tối đa theo 3 tiêu chí )";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(98, 430);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(973, 18);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Nếu tìm theo 3 tiêu chí, tìm được theo ( tên sách, thể loại, tác giả ), (tên sách" +
+    ", ngôn ngữ, tập), ( tên sách, dịch giả, nhà xuất bản )";
             // 
             // FormTimKiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1139, 647);
+            this.ClientSize = new System.Drawing.Size(1154, 717);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btntimkiem);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.texttim3);
@@ -259,5 +284,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btntimkiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tenseries;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
