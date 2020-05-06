@@ -71,6 +71,12 @@
     <Compile Include="FormDoanhThu.Designer.cs">
       <DependentUpon>FormDoanhThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongTin.Designer.cs">
+      <DependentUpon>FormThongTin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTimKiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormBanChay.resx">
       <DependentUpon>FormBanChay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThongTin.resx">
+      <DependentUpon>FormThongTin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTimKiem.resx">
       <DependentUpon>FormTimKiem.cs</DependentUpon>

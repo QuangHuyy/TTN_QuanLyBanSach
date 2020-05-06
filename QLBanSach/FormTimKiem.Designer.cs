@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listbox = new System.Windows.Forms.CheckedListBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,27 +47,9 @@
             this.btntimkiem = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.listbox = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // listbox
-            // 
-            this.listbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.listbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listbox.FormattingEnabled = true;
-            this.listbox.Items.AddRange(new object[] {
-            "Tên sách",
-            "Thể loại",
-            "Tác giả",
-            "Ngôn ngữ",
-            "Tập",
-            "Dịch giả",
-            "Nhà xuất bản",
-            "Năm xuất bản"});
-            this.listbox.Location = new System.Drawing.Point(101, 199);
-            this.listbox.Name = "listbox";
-            this.listbox.Size = new System.Drawing.Size(217, 193);
-            this.listbox.TabIndex = 0;
             // 
             // dataGridView1
             // 
@@ -238,12 +219,32 @@
             this.label6.Text = "Nếu tìm theo 3 tiêu chí, tìm được theo ( tên sách, thể loại, tác giả ), (tên sách" +
     ", ngôn ngữ, tập), ( tên sách, dịch giả, nhà xuất bản )";
             // 
+            // listbox
+            // 
+            this.listbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.listbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listbox.FormattingEnabled = true;
+            this.listbox.Items.AddRange(new object[] {
+            "Tên sách",
+            "Thể loại",
+            "Tác giả",
+            "Ngôn ngữ",
+            "Tập",
+            "Dịch giả",
+            "Nhà xuất bản",
+            "Năm xuất bản"});
+            this.listbox.Location = new System.Drawing.Point(101, 186);
+            this.listbox.Name = "listbox";
+            this.listbox.Size = new System.Drawing.Size(255, 191);
+            this.listbox.TabIndex = 12;
+            // 
             // FormTimKiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1154, 717);
+            this.Controls.Add(this.listbox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btntimkiem);
@@ -255,7 +256,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.listbox);
             this.Name = "FormTimKiem";
             this.Text = "FormTimKiem";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -265,8 +265,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckedListBox listbox;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTL;
@@ -286,5 +284,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Tenseries;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckedListBox listbox;
     }
 }

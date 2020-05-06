@@ -40,7 +40,7 @@ namespace QLBanSach
                 }
                 dbCommand.Connection = connection;
                 dbCommand.CommandType = CommandType.Text;
-                connection.Close();
+                
                 return dbCommand.ExecuteNonQuery();
 
             }
@@ -88,6 +88,7 @@ namespace QLBanSach
                 throw e;
             }
         }
+        
 
     }
 

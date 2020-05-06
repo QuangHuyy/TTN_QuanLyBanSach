@@ -54,7 +54,7 @@
             // 
             // textbanchay
             // 
-            this.textbanchay.Location = new System.Drawing.Point(732, 45);
+            this.textbanchay.Location = new System.Drawing.Point(808, 36);
             this.textbanchay.Name = "textbanchay";
             this.textbanchay.Size = new System.Drawing.Size(100, 22);
             this.textbanchay.TabIndex = 1;
