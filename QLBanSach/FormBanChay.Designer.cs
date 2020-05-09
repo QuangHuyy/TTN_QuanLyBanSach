@@ -46,7 +46,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(159, 36);
+            this.label1.Location = new System.Drawing.Point(47, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(567, 31);
             this.label1.TabIndex = 0;
@@ -54,7 +54,7 @@
             // 
             // textbanchay
             // 
-            this.textbanchay.Location = new System.Drawing.Point(808, 36);
+            this.textbanchay.Location = new System.Drawing.Point(699, 45);
             this.textbanchay.Name = "textbanchay";
             this.textbanchay.Size = new System.Drawing.Size(100, 22);
             this.textbanchay.TabIndex = 1;
@@ -71,11 +71,11 @@
             this.TenTG,
             this.TenNN,
             this.TiLe});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 174);
+            this.dataGridView1.Location = new System.Drawing.Point(41, 163);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(929, 167);
+            this.dataGridView1.Size = new System.Drawing.Size(758, 187);
             this.dataGridView1.TabIndex = 2;
             // 
             // TenSach
@@ -131,7 +131,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(171, 96);
+            this.label2.Location = new System.Drawing.Point(59, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(664, 25);
             this.label2.TabIndex = 3;
@@ -142,7 +142,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1016, 452);
+            this.ClientSize = new System.Drawing.Size(880, 540);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textbanchay);

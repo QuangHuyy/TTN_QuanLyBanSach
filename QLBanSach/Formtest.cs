@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLBanSach
 {
-    public partial class FormBan : Form
+    public partial class Formtest : Form
     {
-        public FormBan()
+        public Formtest()
         {
             InitializeComponent();
         }
