@@ -54,7 +54,7 @@
             // 
             // textbanchay
             // 
-            this.textbanchay.Location = new System.Drawing.Point(703, 59);
+            this.textbanchay.Location = new System.Drawing.Point(773, 58);
             this.textbanchay.Name = "textbanchay";
             this.textbanchay.Size = new System.Drawing.Size(200, 22);
             this.textbanchay.TabIndex = 1;
@@ -142,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1062, 643);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
