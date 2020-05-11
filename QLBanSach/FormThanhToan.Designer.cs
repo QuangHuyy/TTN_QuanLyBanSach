@@ -214,6 +214,7 @@
             this.ColumnDelete.Name = "ColumnDelete";
             this.ColumnDelete.Text = "X";
             this.ColumnDelete.ToolTipText = "Bỏ sản phẩm";
+            this.ColumnDelete.UseColumnTextForButtonValue = true;
             // 
             // lblCheckout
             // 
@@ -247,6 +248,7 @@
             this.dataGridViewSearch.RowTemplate.Height = 24;
             this.dataGridViewSearch.Size = new System.Drawing.Size(852, 189);
             this.dataGridViewSearch.TabIndex = 6;
+            this.dataGridViewSearch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSearch_CellContentClick);
             // 
             // ColumnSearchID
             // 
@@ -276,6 +278,7 @@
             this.ColumnAdd.Name = "ColumnAdd";
             this.ColumnAdd.Text = "Thêm";
             this.ColumnAdd.ToolTipText = "Thêm vào danh sách thanh toán";
+            this.ColumnAdd.UseColumnTextForButtonValue = true;
             this.ColumnAdd.Width = 80;
             // 
             // panelHeader
@@ -437,10 +440,11 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelS;
         private System.Windows.Forms.Button buttonFinish;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSearchID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSearchName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSearchPrice;
-        private System.Windows.Forms.DataGridViewButtonColumn ColumnAdd;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTotal;
+        private System.Windows.Forms.TextBox txtGiven;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelChange;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCheckoutID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnIndex;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnBookName;
@@ -448,10 +452,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTotal;
         private System.Windows.Forms.DataGridViewButtonColumn ColumnDelete;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelTotal;
-        private System.Windows.Forms.TextBox txtGiven;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label labelChange;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSearchID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSearchName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSearchPrice;
+        private System.Windows.Forms.DataGridViewButtonColumn ColumnAdd;
     }
 }

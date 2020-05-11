@@ -131,8 +131,14 @@
     <EmbeddedResource Include="FormBanChay.resx">
       <DependentUpon>FormBanChay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCapNhatSach.resx">
+      <DependentUpon>FormCapNhatSach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDoanhThu.resx">
+      <DependentUpon>FormDoanhThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formtest.resx">
       <DependentUpon>Formtest.cs</DependentUpon>

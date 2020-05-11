@@ -103,7 +103,10 @@ namespace QLBanSach
 
         private void dataGridViewCheckout_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (dataGridViewCheckout.Columns[e.ColumnIndex].Name == "ColumnDelete")
+            {
+                dataGridViewCheckout.Rows.RemoveAt(e.RowIndex);
+            }
         }
 
         private void listView1_MouseClick(object sender, MouseEventArgs e)
@@ -146,7 +149,32 @@ namespace QLBanSach
 
             }
         }
+        string ToMoney(double m)
+        {
+            string t = m.ToString();
+            int i = t.Length;
 
+            while (i > 3)
+            {
+                t = t.Insert(i - 3, " ");
+                i -= 3;
+            }
+
+            return t;
+        }
+        string ToMoney(string m)
+        {
+            string t = m;
+            int i = t.Length;
+
+            while (i > 3)
+            {
+                t = t.Insert(i - 3, " ");
+                i -= 3;
+            }
+
+            return t;
+        }
         void AddToCheckout(DataRow row)
         {
             string ID = row["MaSach"].ToString();
@@ -159,9 +187,32 @@ namespace QLBanSach
                     r.Cells["ColumnQuantity"].Value = q;
                     return;
                 }
+
             }
 
-            dataGridViewCheckout.Rows.Add(ID, checkoutIndex.ToString(), row["TenSach"].ToString(), row["GiaBan"].ToString(), 1, row["GiaBan"].ToString()); ;
+            //dataGridViewCheckout.Rows.Add(ID, checkoutIndex.ToString(), row["TenSach"].ToString(), ToMoney(row["GiaBan"].ToString()), 1, ToMoney(row["GiaBan"].ToString()));
+            dataGridViewCheckout.Rows.Add(ID, checkoutIndex.ToString(), row["TenSach"].ToString(), row["GiaBan"].ToString(), 1, row["GiaBan"].ToString());
+            //dataGridViewCheckout.Rows.Add(ID, checkoutIndex.ToString(int, Int32Converter), row["TenSach"].ToString(), row["GiaBan"].ToString(), 1, row["GiaBan"].ToString());
+
+            checkoutIndex++;
+            //dataGridViewCheckout.Rows[0].Cells[1].Value = 1;
+            dataGridViewCheckout_CellValueChanged(new DataGridView(), new DataGridViewCellEventArgs(0, 0));
+        }
+        void AddToCheckout(DataGridViewRow row)
+        {
+            string ID = row.Cells["ColumnSearchID"].Value.ToString();
+            foreach (DataGridViewRow r in dataGridViewCheckout.Rows)
+            {
+                if (ID.Equals(r.Cells["ColumnCheckoutID"].Value))
+                {
+                    int q = Convert.ToInt32(r.Cells["ColumnQuantity"].Value);
+                    q++;
+                    r.Cells["ColumnQuantity"].Value = q;
+                    return;
+                }
+            }
+
+            dataGridViewCheckout.Rows.Add(ID, checkoutIndex.ToString(), row.Cells["ColumnSearchName"].Value.ToString(), row.Cells["ColumnSearchPrice"].Value.ToString(), 1, row.Cells["ColumnSearchPrice"].Value.ToString());
             checkoutIndex++;
             //dataGridViewCheckout.Rows[0].Cells[1].Value = 1;
             dataGridViewCheckout_CellValueChanged(new DataGridView(), new DataGridViewCellEventArgs(0, 0));
@@ -190,16 +241,32 @@ namespace QLBanSach
             catch (Exception ex) { };
 
             totalMoney = t;
-            labelTotal.Text = totalMoney.ToString();
+            //labelTotal.Text = totalMoney.ToString();
+            labelTotal.Text = ToMoney(totalMoney);
         }
 
         private void txtGiven_TextChanged(object sender, EventArgs e)
         {
-            double given = Convert.ToDouble(txtGiven.Text);
-            //Kiem tra dieu kien sau
-            //....
+            try
+            {
+                double given = Convert.ToDouble(txtGiven.Text);
+                //Kiem tra dieu kien sau
+                //....
 
-            labelChange.Text = (given - totalMoney).ToString();    
+                labelChange.Text = ToMoney((given - totalMoney));
+            }  
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void dataGridViewSearch_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewSearch.Columns[e.ColumnIndex].Name == "ColumnAdd")
+            {
+                AddToCheckout(dataGridViewSearch.Rows[e.RowIndex]);
+            }
         }
     }
 }
