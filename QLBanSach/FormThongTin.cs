@@ -96,13 +96,18 @@ namespace QLBanSach
 
         private void Btntrung_Click(object sender, EventArgs e)
         {
+            DataTable dtU = new DataTable();
             string query = "select Tacgia.Tentg from TACGIA where Tentg='" + texttentg.Text + "'";
-            SqlCommand de = new SqlCommand(query);
-            int row1 = Program.da.executeQuery(de);
-            if (row1 != 0)
+            // SqlCommand de = new SqlCommand(query);
+            dtU = Program.da.readDatathroughAdapter(query);
+            if (dtU.Rows.Count != 0)
             {
                 MessageBox.Show("Trung du lieu!");
 
+            }
+            else
+            {
+                MessageBox.Show("Khong trung du lieu!");
             }
         }
     }

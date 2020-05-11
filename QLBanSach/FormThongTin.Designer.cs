@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btntrung = new System.Windows.Forms.Button();
             this.dataGridViewtacgia = new System.Windows.Forms.DataGridView();
             this.btntimkiemtacgia = new System.Windows.Forms.Button();
             this.btnxoatacgia = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.textmatg = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btntrung = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewtacgia)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TÁC GIẢ";
             // 
+            // btntrung
+            // 
+            this.btntrung.Location = new System.Drawing.Point(631, 215);
+            this.btntrung.Name = "btntrung";
+            this.btntrung.Size = new System.Drawing.Size(154, 36);
+            this.btntrung.TabIndex = 9;
+            this.btntrung.Text = "Kiểm tra trùng";
+            this.btntrung.UseVisualStyleBackColor = true;
+            this.btntrung.Click += new System.EventHandler(this.Btntrung_Click);
+            // 
             // dataGridViewtacgia
             // 
             this.dataGridViewtacgia.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(72)))));
@@ -78,7 +88,7 @@
             // 
             // btntimkiemtacgia
             // 
-            this.btntimkiemtacgia.Location = new System.Drawing.Point(561, 211);
+            this.btntimkiemtacgia.Location = new System.Drawing.Point(481, 215);
             this.btntimkiemtacgia.Name = "btntimkiemtacgia";
             this.btntimkiemtacgia.Size = new System.Drawing.Size(104, 35);
             this.btntimkiemtacgia.TabIndex = 7;
@@ -88,7 +98,7 @@
             // 
             // btnxoatacgia
             // 
-            this.btnxoatacgia.Location = new System.Drawing.Point(393, 213);
+            this.btnxoatacgia.Location = new System.Drawing.Point(349, 215);
             this.btnxoatacgia.Name = "btnxoatacgia";
             this.btnxoatacgia.Size = new System.Drawing.Size(86, 34);
             this.btnxoatacgia.TabIndex = 6;
@@ -98,7 +108,7 @@
             // 
             // btnsuatacgia
             // 
-            this.btnsuatacgia.Location = new System.Drawing.Point(223, 213);
+            this.btnsuatacgia.Location = new System.Drawing.Point(203, 215);
             this.btnsuatacgia.Name = "btnsuatacgia";
             this.btnsuatacgia.Size = new System.Drawing.Size(100, 34);
             this.btnsuatacgia.TabIndex = 5;
@@ -149,16 +159,6 @@
             this.label1.Size = new System.Drawing.Size(97, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã tác giả";
-            // 
-            // btntrung
-            // 
-            this.btntrung.Location = new System.Drawing.Point(717, 211);
-            this.btntrung.Name = "btntrung";
-            this.btntrung.Size = new System.Drawing.Size(154, 36);
-            this.btntrung.TabIndex = 9;
-            this.btntrung.Text = "Kiểm tra trùng";
-            this.btntrung.UseVisualStyleBackColor = true;
-            this.btntrung.Click += new System.EventHandler(this.Btntrung_Click);
             // 
             // FormThongTin
             // 
