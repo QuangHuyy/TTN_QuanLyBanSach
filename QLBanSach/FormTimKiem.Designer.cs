@@ -235,7 +235,7 @@
             "Năm xuất bản"});
             this.listbox.Location = new System.Drawing.Point(101, 186);
             this.listbox.Name = "listbox";
-            this.listbox.Size = new System.Drawing.Size(255, 175);
+            this.listbox.Size = new System.Drawing.Size(255, 191);
             this.listbox.TabIndex = 12;
             // 
             // FormTimKiem
@@ -257,7 +257,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormTimKiem";
-            this.Text = "Tím kiếm sách";
+            this.Text = "FormTimKiem";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

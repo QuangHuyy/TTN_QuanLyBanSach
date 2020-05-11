@@ -64,7 +64,7 @@
             this.textBox1.Location = new System.Drawing.Point(476, 283);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(350, 47);
-            this.textBox1.TabIndex = 3;
+            this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
@@ -83,10 +83,10 @@
             this.buttonLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogIn.Font = new System.Drawing.Font("Segoe UI Semibold", 18F);
             this.buttonLogIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.buttonLogIn.Location = new System.Drawing.Point(613, 449);
+            this.buttonLogIn.Location = new System.Drawing.Point(613, 453);
             this.buttonLogIn.Name = "buttonLogIn";
             this.buttonLogIn.Size = new System.Drawing.Size(213, 57);
-            this.buttonLogIn.TabIndex = 4;
+            this.buttonLogIn.TabIndex = 2;
             this.buttonLogIn.Text = "Đăng nhập";
             this.buttonLogIn.UseVisualStyleBackColor = false;
             this.buttonLogIn.Click += new System.EventHandler(this.buttonLogIn_Click);

@@ -30,21 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panelMenuButton = new System.Windows.Forms.Panel();
             this.panelIndexSubMenu = new System.Windows.Forms.Panel();
             this.btnLanguage = new System.Windows.Forms.Button();
             this.btnCategory = new System.Windows.Forms.Button();
             this.btnTranslator = new System.Windows.Forms.Button();
             this.btnAuthor = new System.Windows.Forms.Button();
             this.btnIndex = new System.Windows.Forms.Button();
-            this.panelStatisticsSubMenu = new System.Windows.Forms.Panel();
-            this.btnTrending = new System.Windows.Forms.Button();
-            this.btnRevenue = new System.Windows.Forms.Button();
             this.btnStatistic = new System.Windows.Forms.Button();
+            this.panelBookSubMenu = new System.Windows.Forms.Panel();
+            this.btnSearchBook = new System.Windows.Forms.Button();
+            this.btnUpdateBook = new System.Windows.Forms.Button();
             this.btnBook = new System.Windows.Forms.Button();
             this.btnCheckout = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.panelNav = new System.Windows.Forms.Panel();
             this.pictureBoxMinimize = new System.Windows.Forms.PictureBox();
@@ -55,13 +53,12 @@
             this.pictureBoxClose = new System.Windows.Forms.PictureBox();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.labelTitle = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.panelMenuButton = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
-            this.panelMenuButton.SuspendLayout();
             this.panelIndexSubMenu.SuspendLayout();
-            this.panelStatisticsSubMenu.SuspendLayout();
+            this.panelBookSubMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,6 +66,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
             this.panelTitle.SuspendLayout();
+            this.panelMenuButton.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -83,24 +82,6 @@
             this.panelMenu.Size = new System.Drawing.Size(250, 770);
             this.panelMenu.TabIndex = 0;
             // 
-            // panelMenuButton
-            // 
-            this.panelMenuButton.AutoScroll = true;
-            this.panelMenuButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(20)))), ((int)(((byte)(55)))));
-            this.panelMenuButton.Controls.Add(this.btnSearch);
-            this.panelMenuButton.Controls.Add(this.panelIndexSubMenu);
-            this.panelMenuButton.Controls.Add(this.btnIndex);
-            this.panelMenuButton.Controls.Add(this.panelStatisticsSubMenu);
-            this.panelMenuButton.Controls.Add(this.btnStatistic);
-            this.panelMenuButton.Controls.Add(this.btnBook);
-            this.panelMenuButton.Controls.Add(this.btnCheckout);
-            this.panelMenuButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuButton.Location = new System.Drawing.Point(0, 80);
-            this.panelMenuButton.Name = "panelMenuButton";
-            this.panelMenuButton.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
-            this.panelMenuButton.Size = new System.Drawing.Size(250, 690);
-            this.panelMenuButton.TabIndex = 0;
-            // 
             // panelIndexSubMenu
             // 
             this.panelIndexSubMenu.Controls.Add(this.btnLanguage);
@@ -110,12 +91,12 @@
             this.panelIndexSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelIndexSubMenu.Location = new System.Drawing.Point(0, 495);
             this.panelIndexSubMenu.Name = "panelIndexSubMenu";
-            this.panelIndexSubMenu.Size = new System.Drawing.Size(229, 320);
+            this.panelIndexSubMenu.Size = new System.Drawing.Size(250, 320);
             this.panelIndexSubMenu.TabIndex = 6;
             // 
             // btnLanguage
             // 
-            this.btnLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(80)))));
+            this.btnLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(20)))), ((int)(((byte)(55)))));
             this.btnLanguage.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLanguage.FlatAppearance.BorderSize = 0;
             this.btnLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -124,8 +105,8 @@
             this.btnLanguage.Image = ((System.Drawing.Image)(resources.GetObject("btnLanguage.Image")));
             this.btnLanguage.Location = new System.Drawing.Point(0, 240);
             this.btnLanguage.Name = "btnLanguage";
-            this.btnLanguage.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnLanguage.Size = new System.Drawing.Size(229, 80);
+            this.btnLanguage.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnLanguage.Size = new System.Drawing.Size(250, 80);
             this.btnLanguage.TabIndex = 8;
             this.btnLanguage.Text = "   Ngôn ngữ";
             this.btnLanguage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -135,7 +116,7 @@
             // 
             // btnCategory
             // 
-            this.btnCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(80)))));
+            this.btnCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(20)))), ((int)(((byte)(55)))));
             this.btnCategory.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCategory.FlatAppearance.BorderSize = 0;
             this.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -144,8 +125,8 @@
             this.btnCategory.Image = ((System.Drawing.Image)(resources.GetObject("btnCategory.Image")));
             this.btnCategory.Location = new System.Drawing.Point(0, 160);
             this.btnCategory.Name = "btnCategory";
-            this.btnCategory.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnCategory.Size = new System.Drawing.Size(229, 80);
+            this.btnCategory.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnCategory.Size = new System.Drawing.Size(250, 80);
             this.btnCategory.TabIndex = 7;
             this.btnCategory.Text = "   Thể loại";
             this.btnCategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -155,7 +136,7 @@
             // 
             // btnTranslator
             // 
-            this.btnTranslator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(80)))));
+            this.btnTranslator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(20)))), ((int)(((byte)(55)))));
             this.btnTranslator.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTranslator.FlatAppearance.BorderSize = 0;
             this.btnTranslator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -164,8 +145,8 @@
             this.btnTranslator.Image = ((System.Drawing.Image)(resources.GetObject("btnTranslator.Image")));
             this.btnTranslator.Location = new System.Drawing.Point(0, 80);
             this.btnTranslator.Name = "btnTranslator";
-            this.btnTranslator.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnTranslator.Size = new System.Drawing.Size(229, 80);
+            this.btnTranslator.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnTranslator.Size = new System.Drawing.Size(250, 80);
             this.btnTranslator.TabIndex = 6;
             this.btnTranslator.Text = "   Dịch giả";
             this.btnTranslator.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -175,7 +156,7 @@
             // 
             // btnAuthor
             // 
-            this.btnAuthor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(80)))));
+            this.btnAuthor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(20)))), ((int)(((byte)(55)))));
             this.btnAuthor.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAuthor.FlatAppearance.BorderSize = 0;
             this.btnAuthor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -184,8 +165,8 @@
             this.btnAuthor.Image = ((System.Drawing.Image)(resources.GetObject("btnAuthor.Image")));
             this.btnAuthor.Location = new System.Drawing.Point(0, 0);
             this.btnAuthor.Name = "btnAuthor";
-            this.btnAuthor.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnAuthor.Size = new System.Drawing.Size(229, 80);
+            this.btnAuthor.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnAuthor.Size = new System.Drawing.Size(250, 80);
             this.btnAuthor.TabIndex = 5;
             this.btnAuthor.Text = "   Tác giả";
             this.btnAuthor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -205,63 +186,13 @@
             this.btnIndex.Location = new System.Drawing.Point(0, 415);
             this.btnIndex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIndex.Name = "btnIndex";
-            this.btnIndex.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
-            this.btnIndex.Size = new System.Drawing.Size(229, 80);
+            this.btnIndex.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnIndex.Size = new System.Drawing.Size(250, 80);
             this.btnIndex.TabIndex = 5;
             this.btnIndex.Text = "    Danh mục";
             this.btnIndex.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnIndex.UseVisualStyleBackColor = true;
             this.btnIndex.Click += new System.EventHandler(this.btnIndex_Click);
-            // 
-            // panelStatisticsSubMenu
-            // 
-            this.panelStatisticsSubMenu.Controls.Add(this.btnTrending);
-            this.panelStatisticsSubMenu.Controls.Add(this.btnRevenue);
-            this.panelStatisticsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelStatisticsSubMenu.Location = new System.Drawing.Point(0, 255);
-            this.panelStatisticsSubMenu.Name = "panelStatisticsSubMenu";
-            this.panelStatisticsSubMenu.Size = new System.Drawing.Size(229, 160);
-            this.panelStatisticsSubMenu.TabIndex = 7;
-            // 
-            // btnTrending
-            // 
-            this.btnTrending.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(80)))));
-            this.btnTrending.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTrending.FlatAppearance.BorderSize = 0;
-            this.btnTrending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTrending.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrending.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnTrending.Image = ((System.Drawing.Image)(resources.GetObject("btnTrending.Image")));
-            this.btnTrending.Location = new System.Drawing.Point(0, 80);
-            this.btnTrending.Name = "btnTrending";
-            this.btnTrending.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnTrending.Size = new System.Drawing.Size(229, 80);
-            this.btnTrending.TabIndex = 8;
-            this.btnTrending.Text = "   Bán chạy";
-            this.btnTrending.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrending.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTrending.UseVisualStyleBackColor = false;
-            this.btnTrending.Click += new System.EventHandler(this.btnTrending_Click);
-            // 
-            // btnRevenue
-            // 
-            this.btnRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(80)))));
-            this.btnRevenue.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRevenue.FlatAppearance.BorderSize = 0;
-            this.btnRevenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRevenue.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnRevenue.Image = ((System.Drawing.Image)(resources.GetObject("btnRevenue.Image")));
-            this.btnRevenue.Location = new System.Drawing.Point(0, 0);
-            this.btnRevenue.Name = "btnRevenue";
-            this.btnRevenue.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnRevenue.Size = new System.Drawing.Size(229, 80);
-            this.btnRevenue.TabIndex = 7;
-            this.btnRevenue.Text = "   Doanh thu";
-            this.btnRevenue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRevenue.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRevenue.UseVisualStyleBackColor = false;
-            this.btnRevenue.Click += new System.EventHandler(this.btnRevenue_Click);
             // 
             // btnStatistic
             // 
@@ -272,16 +203,66 @@
             this.btnStatistic.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnStatistic.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistic.Image")));
             this.btnStatistic.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStatistic.Location = new System.Drawing.Point(0, 175);
+            this.btnStatistic.Location = new System.Drawing.Point(0, 335);
             this.btnStatistic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStatistic.Name = "btnStatistic";
-            this.btnStatistic.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
-            this.btnStatistic.Size = new System.Drawing.Size(229, 80);
+            this.btnStatistic.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnStatistic.Size = new System.Drawing.Size(250, 80);
             this.btnStatistic.TabIndex = 3;
             this.btnStatistic.Text = "    Thống kê";
             this.btnStatistic.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStatistic.UseVisualStyleBackColor = true;
             this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
+            // 
+            // panelBookSubMenu
+            // 
+            this.panelBookSubMenu.Controls.Add(this.btnSearchBook);
+            this.panelBookSubMenu.Controls.Add(this.btnUpdateBook);
+            this.panelBookSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBookSubMenu.Location = new System.Drawing.Point(0, 175);
+            this.panelBookSubMenu.Name = "panelBookSubMenu";
+            this.panelBookSubMenu.Size = new System.Drawing.Size(250, 160);
+            this.panelBookSubMenu.TabIndex = 4;
+            // 
+            // btnSearchBook
+            // 
+            this.btnSearchBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(20)))), ((int)(((byte)(55)))));
+            this.btnSearchBook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSearchBook.FlatAppearance.BorderSize = 0;
+            this.btnSearchBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchBook.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSearchBook.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchBook.Image")));
+            this.btnSearchBook.Location = new System.Drawing.Point(0, 80);
+            this.btnSearchBook.Name = "btnSearchBook";
+            this.btnSearchBook.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnSearchBook.Size = new System.Drawing.Size(250, 80);
+            this.btnSearchBook.TabIndex = 6;
+            this.btnSearchBook.Text = "   Tìm kiếm";
+            this.btnSearchBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearchBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSearchBook.UseVisualStyleBackColor = false;
+            this.btnSearchBook.Click += new System.EventHandler(this.btnSearchBook_Click);
+            // 
+            // btnUpdateBook
+            // 
+            this.btnUpdateBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(20)))), ((int)(((byte)(55)))));
+            this.btnUpdateBook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUpdateBook.FlatAppearance.BorderSize = 0;
+            this.btnUpdateBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateBook.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnUpdateBook.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateBook.Image")));
+            this.btnUpdateBook.Location = new System.Drawing.Point(0, 0);
+            this.btnUpdateBook.Name = "btnUpdateBook";
+            this.btnUpdateBook.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnUpdateBook.Size = new System.Drawing.Size(250, 80);
+            this.btnUpdateBook.TabIndex = 5;
+            this.btnUpdateBook.Text = "   Cập nhật";
+            this.btnUpdateBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdateBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpdateBook.UseVisualStyleBackColor = false;
+            this.btnUpdateBook.Click += new System.EventHandler(this.btnUpdateBook_Click);
             // 
             // btnBook
             // 
@@ -295,8 +276,8 @@
             this.btnBook.Location = new System.Drawing.Point(0, 95);
             this.btnBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBook.Name = "btnBook";
-            this.btnBook.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
-            this.btnBook.Size = new System.Drawing.Size(229, 80);
+            this.btnBook.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnBook.Size = new System.Drawing.Size(250, 80);
             this.btnBook.TabIndex = 2;
             this.btnBook.Text = "    Sách";
             this.btnBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -315,8 +296,8 @@
             this.btnCheckout.Location = new System.Drawing.Point(0, 15);
             this.btnCheckout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
-            this.btnCheckout.Size = new System.Drawing.Size(229, 80);
+            this.btnCheckout.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnCheckout.Size = new System.Drawing.Size(250, 80);
             this.btnCheckout.TabIndex = 1;
             this.btnCheckout.Text = "    Thanh toán";
             this.btnCheckout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -334,16 +315,6 @@
             this.panelLogo.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.panelLogo.Size = new System.Drawing.Size(250, 80);
             this.panelLogo.TabIndex = 0;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(48, -7);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(110, 110);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
             // 
             // panelDesktopPane
             // 
@@ -471,25 +442,32 @@
             this.labelTitle.Text = "TRANG CHỦ";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnSearch
+            // panelMenuButton
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(20)))), ((int)(((byte)(55)))));
-            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(0, 815);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnSearch.Size = new System.Drawing.Size(229, 80);
-            this.btnSearch.TabIndex = 8;
-            this.btnSearch.Text = "   Tìm kiếm";
-            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.panelMenuButton.AutoScroll = true;
+            this.panelMenuButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(20)))), ((int)(((byte)(55)))));
+            this.panelMenuButton.Controls.Add(this.panelIndexSubMenu);
+            this.panelMenuButton.Controls.Add(this.btnIndex);
+            this.panelMenuButton.Controls.Add(this.btnStatistic);
+            this.panelMenuButton.Controls.Add(this.panelBookSubMenu);
+            this.panelMenuButton.Controls.Add(this.btnBook);
+            this.panelMenuButton.Controls.Add(this.btnCheckout);
+            this.panelMenuButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMenuButton.Location = new System.Drawing.Point(0, 80);
+            this.panelMenuButton.Name = "panelMenuButton";
+            this.panelMenuButton.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
+            this.panelMenuButton.Size = new System.Drawing.Size(250, 825);
+            this.panelMenuButton.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(48, -7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(110, 110);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // MainForm
             // 
@@ -509,11 +487,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Phần mềm quản lý bán sách";
             this.panelMenu.ResumeLayout(false);
-            this.panelMenuButton.ResumeLayout(false);
             this.panelIndexSubMenu.ResumeLayout(false);
-            this.panelStatisticsSubMenu.ResumeLayout(false);
+            this.panelBookSubMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelNav.ResumeLayout(false);
             this.panelNav.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimize)).EndInit();
@@ -522,6 +498,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
             this.panelTitle.ResumeLayout(false);
+            this.panelMenuButton.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -549,12 +527,11 @@
         private System.Windows.Forms.Button btnTranslator;
         private System.Windows.Forms.Button btnAuthor;
         private System.Windows.Forms.Button btnIndex;
+        private System.Windows.Forms.Panel panelBookSubMenu;
+        private System.Windows.Forms.Button btnSearchBook;
+        private System.Windows.Forms.Button btnUpdateBook;
         private System.Windows.Forms.Panel panelMenuButton;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panelStatisticsSubMenu;
-        private System.Windows.Forms.Button btnTrending;
-        private System.Windows.Forms.Button btnRevenue;
-        private System.Windows.Forms.Button btnSearch;
     }
 }
 
