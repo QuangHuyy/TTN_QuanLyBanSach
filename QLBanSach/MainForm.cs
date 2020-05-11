@@ -39,26 +39,24 @@ namespace QLBanSach
         }
         void CustomizeDesing()
         {
-            panelBookSubMenu.Visible = false;
             panelIndexSubMenu.Visible = false;
+            panelStatisticsSubMenu.Visible = false;
         }
         void HideSubMenu()
         {
-            if (panelBookSubMenu.Visible == true)
-                panelBookSubMenu.Visible = false;
             if (panelIndexSubMenu.Visible == true)
                 panelIndexSubMenu.Visible = false;
+            if (panelStatisticsSubMenu.Visible == true)
+                panelStatisticsSubMenu.Visible = false;
         }
 
         #region make form draggable
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
-
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
-
         private void panelNav_MouseDown(object sender, MouseEventArgs e)
         {
 
@@ -68,14 +66,10 @@ namespace QLBanSach
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
-
-        //Resizing
-
         private int tolerance = 16;
         private const int WM_NCHITTEST = 132;
         private const int HTBOTTOMRIGHT = 17;
         private Rectangle sizeGripRectangle;
-
         protected override void WndProc(ref Message m)
         {
             switch (m.Msg)
@@ -91,7 +85,6 @@ namespace QLBanSach
                     break;
             }
         }
-
         protected override void OnSizeChanged(EventArgs e)
         {
             base.OnSizeChanged(e);
@@ -101,7 +94,6 @@ namespace QLBanSach
             this.panelDesktopPane.Region = region;
             this.Invalidate();
         }
-
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
@@ -151,11 +143,11 @@ namespace QLBanSach
         }
         private void DisableButton()
         {
-            foreach(Control previousBtn in panelMenu.Controls)
+            foreach(Control previousBtn in panelMenuButton.Controls)
             {
                 if (previousBtn.GetType() == typeof(Button))
                 {
-                    previousBtn.BackColor = Color.FromArgb(46, 48, 72);
+                    previousBtn.BackColor = Color.FromArgb(17, 20, 55);
                     previousBtn.ForeColor = Color.Gainsboro;
                     previousBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
@@ -165,7 +157,7 @@ namespace QLBanSach
                     {
                         if (c.GetType() == typeof(Button))
                         {
-                            c.BackColor = Color.FromArgb(17, 20, 55);
+                            c.BackColor = Color.FromArgb(0, 10, 80);
                             c.ForeColor = Color.Gainsboro;
                             c.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         }
@@ -179,61 +171,50 @@ namespace QLBanSach
         {
             Application.Exit();
         }
-
         private void pictureBoxRestore_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Normal;
             pictureBoxMaximize.Visible = true;
             pictureBoxRestore.Visible = false;
         }
-
         private void pictureBoxMaximize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
             pictureBoxMaximize.Visible = false;
             pictureBoxRestore.Visible = true;
         }
-
         private void pictureBoxMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
-
         private void pictureBoxMinimize_MouseHover(object sender, EventArgs e)
         {
             pictureBoxMinimize.BackColor = Color.FromArgb(115, 247, 221);
         }
-
         private void pictureBoxMinimize_MouseLeave(object sender, EventArgs e)
         {
             pictureBoxMinimize.BackColor = Color.FromArgb(53, 61, 73);
         }
-
         private void pictureBoxRestore_MouseHover(object sender, EventArgs e)
         {
             pictureBoxRestore.BackColor = Color.FromArgb(115, 247, 221);
         }
-
         private void pictureBoxRestore_MouseLeave(object sender, EventArgs e)
         {
             pictureBoxRestore.BackColor = Color.FromArgb(53, 61, 73);
         }
-
         private void pictureBoxMaximize_MouseHover(object sender, EventArgs e)
         {
             pictureBoxMaximize.BackColor = Color.FromArgb(115, 247, 221);
         }
-
         private void pictureBoxMaximize_MouseLeave(object sender, EventArgs e)
         {
             pictureBoxMaximize.BackColor = Color.FromArgb(53, 61, 73);
         }
-
         private void pictureBoxClose_MouseHover(object sender, EventArgs e)
         {
             pictureBoxClose.BackColor = Color.FromArgb(115, 247, 221);
         }
-
         private void pictureBoxClose_MouseLeave(object sender, EventArgs e)
         {
             pictureBoxClose.BackColor = Color.FromArgb(53, 61, 73);
@@ -248,50 +229,52 @@ namespace QLBanSach
         }
         private void btnBook_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
-            ShowSubMenu(panelBookSubMenu);
+            //ActivateButton(sender);
+            OpenChildForm(new FormCapNhatSach(), sender);
+            HideSubMenu();
         }
         private void btnStatistic_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormBanChay(), sender);
-            HideSubMenu();
+            ActivateButton(sender);
+            ShowSubMenu(panelStatisticsSubMenu);
         }
         private void btnIndex_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
             ShowSubMenu(panelIndexSubMenu);
         }
-
-        private void btnUpdateBook_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-        }
-
-        private void btnSearchBook_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-        }
-
         private void btnAuthor_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
         }
-
         private void btnTranslator_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
         }
-
         private void btnCategory_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
         }
-
         private void btnLanguage_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
         }
+        private void btnRevenue_Click(object sender, EventArgs e)
+        {
+            //ActivateButton(sender);
+            OpenChildForm(new FormDoanhThu(), sender);
+            //HideSubMenu();
+        }
+        private void btnTrending_Click(object sender, EventArgs e)
+        {
+            //ActivateButton(sender);
+            OpenChildForm(new FormBanChay(), sender);
+        }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            //ActivateButton(sender);
+            OpenChildForm(new FormTimKiem(), sender);
+        }
         #endregion
-
     }
 }
