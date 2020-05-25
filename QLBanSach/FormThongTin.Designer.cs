@@ -167,7 +167,7 @@
             this.ClientSize = new System.Drawing.Size(1062, 643);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormThongTin";
-            this.Text = "FormThongTin";
+            this.Text = "Bảng Tác Giả";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewtacgia)).EndInit();

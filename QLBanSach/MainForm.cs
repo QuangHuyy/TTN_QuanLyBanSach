@@ -230,7 +230,7 @@ namespace QLBanSach
         private void btnBook_Click(object sender, EventArgs e)
         {
             //ActivateButton(sender);
-            OpenChildForm(new FormCapNhatSach(), sender);
+            OpenChildForm(new FormNhapSach(), sender);
             HideSubMenu();
         }
         private void btnStatistic_Click(object sender, EventArgs e)
@@ -245,19 +245,23 @@ namespace QLBanSach
         }
         private void btnAuthor_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            //ActivateButton(sender);
+            OpenChildForm(new FormThongTin(), sender);
         }
         private void btnTranslator_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            //ActivateButton(sender);
+            OpenChildForm(new FormDichGia(), sender);
         }
         private void btnCategory_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            //ActivateButton(sender);
+            OpenChildForm(new FormDanhMuc_TLoai(), sender);
         }
         private void btnLanguage_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            //ActivateButton(sender);
+            OpenChildForm(new FormNgonNgu(), sender);
         }
         private void btnRevenue_Click(object sender, EventArgs e)
         {
@@ -274,6 +278,7 @@ namespace QLBanSach
         {
             //ActivateButton(sender);
             OpenChildForm(new FormTimKiem(), sender);
+            HideSubMenu();
         }
         #endregion
     }

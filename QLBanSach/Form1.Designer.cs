@@ -33,6 +33,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxDecode = new System.Windows.Forms.TextBox();
             this.buttonDecode = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,18 +79,28 @@
             this.buttonDecode.UseVisualStyleBackColor = true;
             this.buttonDecode.Click += new System.EventHandler(this.buttonDecode_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(179, 271);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 3;
+            this.comboBox1.Text = "Ahaha";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonDecode);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxDecode);
             this.Controls.Add(this.textBoxEncode);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Bảng Thể Loại";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -103,5 +114,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBoxDecode;
         private System.Windows.Forms.Button buttonDecode;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
