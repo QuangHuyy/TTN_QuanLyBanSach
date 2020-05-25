@@ -37,7 +37,6 @@
             this.TenNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tenseries = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.texttim1 = new System.Windows.Forms.TextBox();
@@ -65,7 +64,7 @@
             this.TenNXB,
             this.GiaBan,
             this.Tenseries});
-            this.dataGridView1.Location = new System.Drawing.Point(114, 525);
+            this.dataGridView1.Location = new System.Drawing.Point(43, 451);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -128,34 +127,23 @@
             this.Tenseries.Name = "Tenseries";
             this.Tenseries.Width = 125;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Coral;
-            this.label1.Location = new System.Drawing.Point(212, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(723, 31);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "TÌM KIẾM SÁCH THEO YÊU CẦU CỦA KHÁCH HÀNG";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Coral;
-            this.label2.Location = new System.Drawing.Point(96, 111);
+            this.label2.Location = new System.Drawing.Point(38, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 25);
+            this.label2.Size = new System.Drawing.Size(123, 32);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Tìm theo tiêu chí";
+            this.label2.Text = "Tiêu chí";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Coral;
-            this.label3.Location = new System.Drawing.Point(109, 474);
+            this.label3.Location = new System.Drawing.Point(89, 334);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 25);
             this.label3.TabIndex = 4;
@@ -186,16 +174,16 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(516, 199);
+            this.label4.Location = new System.Drawing.Point(617, 162);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(452, 25);
+            this.label4.Size = new System.Drawing.Size(227, 25);
             this.label4.TabIndex = 8;
-            this.label4.Text = "tối đa theo 3 tiêu chí ( nhập thông tin cần tìm )";
+            this.label4.Text = "Nhập thông tin cần tìm";
             // 
             // btntimkiem
             // 
             this.btntimkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btntimkiem.Location = new System.Drawing.Point(405, 196);
+            this.btntimkiem.Location = new System.Drawing.Point(506, 159);
             this.btntimkiem.Name = "btntimkiem";
             this.btntimkiem.Size = new System.Drawing.Size(105, 28);
             this.btntimkiem.TabIndex = 9;
@@ -208,17 +196,17 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Coral;
-            this.label5.Location = new System.Drawing.Point(98, 149);
+            this.label5.Location = new System.Drawing.Point(167, 39);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(258, 18);
+            this.label5.Size = new System.Drawing.Size(76, 18);
             this.label5.TabIndex = 10;
-            this.label5.Text = "( Tìm được tối đa theo 3 tiêu chí )";
+            this.label5.Text = "(tối đa 3)";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(98, 430);
+            this.label6.Location = new System.Drawing.Point(40, 401);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(973, 18);
             this.label6.TabIndex = 11;
@@ -228,7 +216,7 @@
             // listbox
             // 
             this.listbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(20)))), ((int)(((byte)(55)))));
-            this.listbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.listbox.FormattingEnabled = true;
             this.listbox.Items.AddRange(new object[] {
@@ -240,9 +228,9 @@
             "Dịch giả",
             "Nhà xuất bản",
             "Năm xuất bản"});
-            this.listbox.Location = new System.Drawing.Point(101, 186);
+            this.listbox.Location = new System.Drawing.Point(43, 76);
             this.listbox.Name = "listbox";
-            this.listbox.Size = new System.Drawing.Size(255, 175);
+            this.listbox.Size = new System.Drawing.Size(255, 204);
             this.listbox.TabIndex = 12;
             // 
             // FormTimKiem
@@ -261,10 +249,10 @@
             this.Controls.Add(this.texttim1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormTimKiem";
-            this.Text = "Tím kiếm sách";
+            this.Text = "Tím kiếm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -280,7 +268,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNN;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNXB;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaBan;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox texttim1;

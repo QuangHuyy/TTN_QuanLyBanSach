@@ -164,7 +164,9 @@ namespace QLBanSach
         }
         string ToMoney(string m)
         {
-            string t = m;
+            string t = new string(m.ToCharArray()
+                    .Where(c => !Char.IsWhiteSpace(c))
+                    .ToArray());
             int i = t.Length;
 
             while (i > 3)
@@ -245,20 +247,32 @@ namespace QLBanSach
             labelTotal.Text = ToMoney(totalMoney);
         }
 
+        bool skipTextChanged = false;
         private void txtGiven_TextChanged(object sender, EventArgs e)
         {
+            if (skipTextChanged)
+            {
+                skipTextChanged = false;
+                return;
+            }
             try
             {
-                double given = Convert.ToDouble(txtGiven.Text);
-                //Kiem tra dieu kien sau
-                //....
+                //txtGiven.Text = ToMoney(txtGiven.Text);
+                string m = txtGiven.Text;
+                string given = new string(m.ToCharArray()
+                    .Where(c => !Char.IsWhiteSpace(c))
+                    .ToArray());
 
-                labelChange.Text = ToMoney((given - totalMoney));
-            }  
+
+                txtGiven.Text = ToMoney(m);
+                labelChange.Text = ToMoney((Convert.ToDouble(given) - totalMoney));
+            }
             catch (Exception ex)
             {
 
             }
+            txtGiven.SelectionStart = txtGiven.Text.Length;
+            txtGiven.SelectionLength = 0;
         }
 
         private void dataGridViewSearch_CellContentClick(object sender, DataGridViewCellEventArgs e)

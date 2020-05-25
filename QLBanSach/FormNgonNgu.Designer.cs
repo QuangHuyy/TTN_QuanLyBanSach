@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textmann = new System.Windows.Forms.TextBox();
-            this.texttennn = new System.Windows.Forms.TextBox();
-            this.btnthemngonngu = new System.Windows.Forms.Button();
-            this.suangonngu = new System.Windows.Forms.Button();
-            this.btnxoangonngu = new System.Windows.Forms.Button();
-            this.btntimkiemngonngu = new System.Windows.Forms.Button();
-            this.dataGridViewngonngu = new System.Windows.Forms.DataGridView();
             this.btntrung = new System.Windows.Forms.Button();
+            this.btntimkiemngonngu = new System.Windows.Forms.Button();
+            this.btnxoangonngu = new System.Windows.Forms.Button();
+            this.suangonngu = new System.Windows.Forms.Button();
+            this.btnthemngonngu = new System.Windows.Forms.Button();
+            this.texttennn = new System.Windows.Forms.TextBox();
+            this.textmann = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dataGridViewngonngu = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewngonngu)).BeginInit();
             this.SuspendLayout();
@@ -62,59 +62,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "NGÔN NGỮ";
             // 
-            // label4
+            // btntrung
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Coral;
-            this.label4.Location = new System.Drawing.Point(40, 80);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Mã ngôn ngữ";
+            this.btntrung.Location = new System.Drawing.Point(555, 241);
+            this.btntrung.Name = "btntrung";
+            this.btntrung.Size = new System.Drawing.Size(161, 36);
+            this.btntrung.TabIndex = 11;
+            this.btntrung.Text = "Kiểm tra trùng";
+            this.btntrung.UseVisualStyleBackColor = true;
+            this.btntrung.Click += new System.EventHandler(this.Btntrung_Click);
             // 
-            // label3
+            // btntimkiemngonngu
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Coral;
-            this.label3.Location = new System.Drawing.Point(34, 131);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 25);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Tên ngôn ngữ";
-            // 
-            // textmann
-            // 
-            this.textmann.Location = new System.Drawing.Point(245, 80);
-            this.textmann.Name = "textmann";
-            this.textmann.Size = new System.Drawing.Size(188, 30);
-            this.textmann.TabIndex = 5;
-            // 
-            // texttennn
-            // 
-            this.texttennn.Location = new System.Drawing.Point(245, 131);
-            this.texttennn.Name = "texttennn";
-            this.texttennn.Size = new System.Drawing.Size(188, 30);
-            this.texttennn.TabIndex = 6;
-            // 
-            // btnthemngonngu
-            // 
-            this.btnthemngonngu.Location = new System.Drawing.Point(37, 240);
-            this.btnthemngonngu.Name = "btnthemngonngu";
-            this.btnthemngonngu.Size = new System.Drawing.Size(83, 33);
-            this.btnthemngonngu.TabIndex = 7;
-            this.btnthemngonngu.Text = "Thêm";
-            this.btnthemngonngu.UseVisualStyleBackColor = true;
-            this.btnthemngonngu.Click += new System.EventHandler(this.Btnthemngonngu_Click);
-            // 
-            // suangonngu
-            // 
-            this.suangonngu.Location = new System.Drawing.Point(165, 240);
-            this.suangonngu.Name = "suangonngu";
-            this.suangonngu.Size = new System.Drawing.Size(89, 34);
-            this.suangonngu.TabIndex = 8;
-            this.suangonngu.Text = "Sửa";
-            this.suangonngu.UseVisualStyleBackColor = true;
-            this.suangonngu.Click += new System.EventHandler(this.Suangonngu_Click);
+            this.btntimkiemngonngu.Location = new System.Drawing.Point(424, 241);
+            this.btntimkiemngonngu.Name = "btntimkiemngonngu";
+            this.btntimkiemngonngu.Size = new System.Drawing.Size(101, 36);
+            this.btntimkiemngonngu.TabIndex = 10;
+            this.btntimkiemngonngu.Text = "Tìm kiếm";
+            this.btntimkiemngonngu.UseVisualStyleBackColor = true;
+            this.btntimkiemngonngu.Click += new System.EventHandler(this.Btntimkiemngonngu_Click);
             // 
             // btnxoangonngu
             // 
@@ -126,15 +92,59 @@
             this.btnxoangonngu.UseVisualStyleBackColor = true;
             this.btnxoangonngu.Click += new System.EventHandler(this.Btnxoangonngu_Click);
             // 
-            // btntimkiemngonngu
+            // suangonngu
             // 
-            this.btntimkiemngonngu.Location = new System.Drawing.Point(424, 241);
-            this.btntimkiemngonngu.Name = "btntimkiemngonngu";
-            this.btntimkiemngonngu.Size = new System.Drawing.Size(101, 36);
-            this.btntimkiemngonngu.TabIndex = 10;
-            this.btntimkiemngonngu.Text = "Tìm kiếm";
-            this.btntimkiemngonngu.UseVisualStyleBackColor = true;
-            this.btntimkiemngonngu.Click += new System.EventHandler(this.Btntimkiemngonngu_Click);
+            this.suangonngu.Location = new System.Drawing.Point(165, 240);
+            this.suangonngu.Name = "suangonngu";
+            this.suangonngu.Size = new System.Drawing.Size(89, 34);
+            this.suangonngu.TabIndex = 8;
+            this.suangonngu.Text = "Sửa";
+            this.suangonngu.UseVisualStyleBackColor = true;
+            this.suangonngu.Click += new System.EventHandler(this.Suangonngu_Click);
+            // 
+            // btnthemngonngu
+            // 
+            this.btnthemngonngu.Location = new System.Drawing.Point(37, 240);
+            this.btnthemngonngu.Name = "btnthemngonngu";
+            this.btnthemngonngu.Size = new System.Drawing.Size(83, 33);
+            this.btnthemngonngu.TabIndex = 7;
+            this.btnthemngonngu.Text = "Thêm";
+            this.btnthemngonngu.UseVisualStyleBackColor = true;
+            this.btnthemngonngu.Click += new System.EventHandler(this.Btnthemngonngu_Click);
+            // 
+            // texttennn
+            // 
+            this.texttennn.Location = new System.Drawing.Point(245, 131);
+            this.texttennn.Name = "texttennn";
+            this.texttennn.Size = new System.Drawing.Size(188, 30);
+            this.texttennn.TabIndex = 6;
+            // 
+            // textmann
+            // 
+            this.textmann.Location = new System.Drawing.Point(245, 80);
+            this.textmann.Name = "textmann";
+            this.textmann.Size = new System.Drawing.Size(188, 30);
+            this.textmann.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Coral;
+            this.label3.Location = new System.Drawing.Point(34, 131);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(134, 25);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Tên ngôn ngữ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Coral;
+            this.label4.Location = new System.Drawing.Point(40, 80);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(127, 25);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Mã ngôn ngữ";
             // 
             // dataGridViewngonngu
             // 
@@ -148,16 +158,6 @@
             this.dataGridViewngonngu.Size = new System.Drawing.Size(880, 155);
             this.dataGridViewngonngu.TabIndex = 10;
             // 
-            // btntrung
-            // 
-            this.btntrung.Location = new System.Drawing.Point(555, 241);
-            this.btntrung.Name = "btntrung";
-            this.btntrung.Size = new System.Drawing.Size(161, 36);
-            this.btntrung.TabIndex = 11;
-            this.btntrung.Text = "Kiểm tra trùng";
-            this.btntrung.UseVisualStyleBackColor = true;
-            this.btntrung.Click += new System.EventHandler(this.Btntrung_Click);
-            // 
             // FormNgonNgu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -166,7 +166,7 @@
             this.Controls.Add(this.dataGridViewngonngu);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormNgonNgu";
-            this.Text = "FormNgonNgu";
+            this.Text = "Bảng Ngôn Ngữ";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewngonngu)).EndInit();
