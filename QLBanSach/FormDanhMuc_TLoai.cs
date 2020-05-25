@@ -22,9 +22,9 @@ namespace QLBanSach
             comboBoxTenDM.SelectedIndex = -1;
             FillCombo("SELECT MaDM,TenDM FROM DANHMUCSACH", comboBoxDM_TL, "MaDM", "TenDM");
 
-            comboBoxTenDM.SelectedIndex = -1;
+            comboBoxDM_TL.SelectedIndex = -1;
             FillCombo("SELECT MaTL,TenTL FROM THELOAI", comboBoxTenTL, "MaTL", "TenTL");
-            comboBoxTenDM.SelectedIndex = -1;
+            comboBoxTenTL.SelectedIndex = -1;
         }
         void loadDataDM()
         {
