@@ -18,7 +18,7 @@ namespace QLBanSach
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new DanhMuc_TLoai());
             //Application.Run(new FormThanhToan());
             //Application.Run(new Form1());
         }
