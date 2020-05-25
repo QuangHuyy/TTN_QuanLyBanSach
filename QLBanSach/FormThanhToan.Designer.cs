@@ -135,6 +135,7 @@
             this.buttonFinish.TabIndex = 10;
             this.buttonFinish.Text = "Xuất hóa đơn";
             this.buttonFinish.UseVisualStyleBackColor = false;
+            this.buttonFinish.Click += new System.EventHandler(this.buttonFinish_Click);
             // 
             // dataGridViewCheckout
             // 
