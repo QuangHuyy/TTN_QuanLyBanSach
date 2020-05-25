@@ -136,7 +136,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(664, 25);
             this.label2.TabIndex = 3;
-            this.label2.Text = "( Sách bán chạy tại cửa hàng khi số lượng bán/ số lượng nhập >50 )";
+            this.label2.Text = "( Sách bán chạy tại cửa hàng khi số lượng bán/ số lượng nhập >10 )";
             // 
             // FormBanChay
             // 
