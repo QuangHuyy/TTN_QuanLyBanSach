@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
@@ -16,16 +17,18 @@ namespace QLBanSach
 {
     public partial class FormThanhToan : Form
     {
-        public FormThanhToan()
+        public FormThanhToan(MainForm par)
         {
             InitializeComponent();
             Populate();
             SetDataGridView();
             labelTotal.Text = totalMoney.ToString();
+            parent = par;
         }
         private ListViewItem selectingItem = null;
         private int checkoutIndex = 1;
         double totalMoney = 0;
+        MainForm parent;
 
         void SetDataGridView()
         {
@@ -281,6 +284,29 @@ namespace QLBanSach
             {
                 AddToCheckout(dataGridViewSearch.Rows[e.RowIndex]);
             }
+        }
+
+        private void buttonFinish_Click(object sender, EventArgs e)
+        {
+            string query = "INSERT INTO HDBAN(NgayBan, MaNV) VALUES(GETDATE(), 1)";
+            Program.da.executeQuery(new SqlCommand(query));
+
+            DataTable t = Program.da.readDatathroughAdapter("SELECT MAX(MaHDB) as MaHDB FROM HDBAN");
+            string MaHDB = t.Rows[0][0].ToString();
+
+            foreach (DataGridViewRow r in dataGridViewCheckout.Rows)
+            {
+                string MaSach, SoLuong;
+                MaSach = r.Cells["ColumnCheckoutID"].Value.ToString();
+                SoLuong = r.Cells["ColumnQuantity"].Value.ToString();
+                string insertQuery = "INSERT INTO GDBAN(MaHDB, MaSach, SoLuong) VALUES(" + MaHDB + "," + MaSach +"," + SoLuong +")";
+
+                Program.da.executeQuery(new SqlCommand(insertQuery));
+            }
+
+            //parent.OpenChildForm(new FormThanhToan(parent), sender);
+            //this.Close();
+            parent.btnCheckout_Click(sender, e);
         }
     }
 }

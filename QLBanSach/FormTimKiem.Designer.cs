@@ -29,14 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tenseries = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.texttim1 = new System.Windows.Forms.TextBox();
@@ -55,77 +47,12 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(72)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TenSach,
-            this.TenTL,
-            this.TenTG,
-            this.TenDG,
-            this.TenNN,
-            this.TenNXB,
-            this.GiaBan,
-            this.Tenseries});
             this.dataGridView1.Location = new System.Drawing.Point(43, 451);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(944, 180);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // TenSach
-            // 
-            this.TenSach.HeaderText = "Tên sách";
-            this.TenSach.MinimumWidth = 6;
-            this.TenSach.Name = "TenSach";
-            this.TenSach.Width = 125;
-            // 
-            // TenTL
-            // 
-            this.TenTL.HeaderText = "Thể loại";
-            this.TenTL.MinimumWidth = 6;
-            this.TenTL.Name = "TenTL";
-            this.TenTL.Width = 125;
-            // 
-            // TenTG
-            // 
-            this.TenTG.HeaderText = "Tác giả";
-            this.TenTG.MinimumWidth = 6;
-            this.TenTG.Name = "TenTG";
-            this.TenTG.Width = 125;
-            // 
-            // TenDG
-            // 
-            this.TenDG.HeaderText = "Dịch giả";
-            this.TenDG.MinimumWidth = 6;
-            this.TenDG.Name = "TenDG";
-            this.TenDG.Width = 125;
-            // 
-            // TenNN
-            // 
-            this.TenNN.HeaderText = "Ngôn ngữ";
-            this.TenNN.MinimumWidth = 6;
-            this.TenNN.Name = "TenNN";
-            this.TenNN.Width = 125;
-            // 
-            // TenNXB
-            // 
-            this.TenNXB.HeaderText = "Nhà xuất bản";
-            this.TenNXB.MinimumWidth = 6;
-            this.TenNXB.Name = "TenNXB";
-            this.TenNXB.Width = 125;
-            // 
-            // GiaBan
-            // 
-            this.GiaBan.HeaderText = "Giá bán";
-            this.GiaBan.MinimumWidth = 6;
-            this.GiaBan.Name = "GiaBan";
-            this.GiaBan.Width = 125;
-            // 
-            // Tenseries
-            // 
-            this.Tenseries.HeaderText = "Tập";
-            this.Tenseries.MinimumWidth = 6;
-            this.Tenseries.Name = "Tenseries";
-            this.Tenseries.Width = 125;
             // 
             // label2
             // 
@@ -261,13 +188,6 @@
 
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenTL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenTG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenDG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenNN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenNXB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GiaBan;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox texttim1;
@@ -275,7 +195,6 @@
         private System.Windows.Forms.TextBox texttim3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btntimkiem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tenseries;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckedListBox listbox;

@@ -34,20 +34,17 @@ namespace QLBanSach
             else
             {
                 panelMenu.Enabled = true;
-                OpenChildForm(new FormThanhToan(), btnCheckout);
+                OpenChildForm(new FormThanhToan(this), btnCheckout);
             }
         }
         void CustomizeDesing()
         {
             panelIndexSubMenu.Visible = false;
-            panelStatisticsSubMenu.Visible = false;
         }
         void HideSubMenu()
         {
             if (panelIndexSubMenu.Visible == true)
                 panelIndexSubMenu.Visible = false;
-            if (panelStatisticsSubMenu.Visible == true)
-                panelStatisticsSubMenu.Visible = false;
         }
 
         #region make form draggable
@@ -124,7 +121,7 @@ namespace QLBanSach
                 }
             }
         }
-        private void OpenChildForm(Form childForm, object btnSender)
+        public void OpenChildForm(Form childForm, object btnSender)
         {
             if (activeForm != null)
             {
@@ -222,9 +219,9 @@ namespace QLBanSach
         #endregion
 
         #region buttonClick
-        private void btnCheckout_Click(object sender, EventArgs e)
+        public void btnCheckout_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormThanhToan(), sender);
+            OpenChildForm(new FormThanhToan(this), sender);
             HideSubMenu();
         }
         private void btnBook_Click(object sender, EventArgs e)
@@ -235,8 +232,10 @@ namespace QLBanSach
         }
         private void btnStatistic_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
-            ShowSubMenu(panelStatisticsSubMenu);
+            //ActivateButton(sender);
+            //ShowSubMenu(panelStatisticsSubMenu);
+            OpenChildForm(new FormBanChay(), sender);
+            HideSubMenu();
         }
         private void btnIndex_Click(object sender, EventArgs e)
         {

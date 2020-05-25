@@ -50,7 +50,7 @@ namespace QLBanSach
                     string query1 = "select sach.TenSach, Theloai.TenTL, Tacgia.TenTG,DichGia.TenDG,NgonNgu.TenNN,Nhaxuatban.TenNXB, sach.giaban, series.tenseries "
                                   + " from sach,series, theloai, tacgia, dichgia, ngonngu,nhaxuatban, theloai_sach, tacgia_sach, dichgia_sach, ngonngu_sach where "
                                   + " sach.masach=theloai_sach.masach and theloai_sach.matl=theloai.matl and sach.masach=ngonngu_sach.masach and ngonngu_sach.mann=ngonngu.mann and sach.masach=dichgia_sach.masach and dichgia.madg=dichgia_sach.madg and sach.masach=tacgia_sach.masach and tacgia_sach.matg=tacgia.matg "
-                                  + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach ='" + texttim1.Text + "'";
+                                  + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach =N'" + texttim1.Text + "'";
                     dt = Program.da.readDatathroughAdapter(query1);
                     dataGridView1.DataSource = dt;
                 }
@@ -66,7 +66,7 @@ namespace QLBanSach
                     string query2 = "select sach.TenSach, Theloai.TenTL, Tacgia.TenTG,DichGia.TenDG,NgonNgu.TenNN,Nhaxuatban.TenNXB, sach.giaban, series.tenseries "
                                  + " from sach,series, theloai, tacgia, dichgia, ngonngu,nhaxuatban, theloai_sach, tacgia_sach, dichgia_sach, ngonngu_sach where "
                                  + " sach.masach=theloai_sach.masach and theloai_sach.matl=theloai.matl and sach.masach=ngonngu_sach.masach and ngonngu_sach.mann=ngonngu.mann and sach.masach=dichgia_sach.masach and dichgia.madg=dichgia_sach.madg and sach.masach=tacgia_sach.masach and tacgia_sach.matg=tacgia.matg "
-                                 + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and theloai.tentl ='" + texttim1.Text + "'";
+                                 + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and theloai.tentl =N'" + texttim1.Text + "'";
                     dt1 = Program.da.readDatathroughAdapter(query2);
                     dataGridView1.DataSource = dt1;
                 }
@@ -82,7 +82,7 @@ namespace QLBanSach
                     string query3 = "select sach.TenSach, Theloai.TenTL, Tacgia.TenTG,DichGia.TenDG,NgonNgu.TenNN,Nhaxuatban.TenNXB, sach.giaban, series.tenseries "
                                   + " from sach,series, theloai, tacgia, dichgia, ngonngu,nhaxuatban, theloai_sach, tacgia_sach, dichgia_sach, ngonngu_sach where "
                                   + " sach.masach=theloai_sach.masach and theloai_sach.matl=theloai.matl and sach.masach=ngonngu_sach.masach and ngonngu_sach.mann=ngonngu.mann and sach.masach=dichgia_sach.masach and dichgia.madg=dichgia_sach.madg and sach.masach=tacgia_sach.masach and tacgia_sach.matg=tacgia.matg "
-                                  + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and tacgia.tentg ='" + texttim1.Text + "'";
+                                  + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and tacgia.tentg =N'" + texttim1.Text + "'";
                     dt2 = Program.da.readDatathroughAdapter(query3);
                     dataGridView1.DataSource = dt2;
                 }
@@ -98,7 +98,7 @@ namespace QLBanSach
                     string query4 = "select sach.TenSach, Theloai.TenTL, Tacgia.TenTG,DichGia.TenDG,NgonNgu.TenNN,Nhaxuatban.TenNXB, sach.giaban, series.tenseries "
                                  + " from sach,series, theloai, tacgia, dichgia, ngonngu,nhaxuatban, theloai_sach, tacgia_sach, dichgia_sach, ngonngu_sach where "
                                  + " sach.masach=theloai_sach.masach and theloai_sach.matl=theloai.matl and sach.masach=ngonngu_sach.masach and ngonngu_sach.mann=ngonngu.mann and sach.masach=dichgia_sach.masach and dichgia.madg=dichgia_sach.madg and sach.masach=tacgia_sach.masach and tacgia_sach.matg=tacgia.matg "
-                                 + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and ngonngu.tennn ='" + texttim1.Text + "'";
+                                 + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and ngonngu.tennn =N'" + texttim1.Text + "'";
                     dt3 = Program.da.readDatathroughAdapter(query4);
                     dataGridView1.DataSource = dt3;
                 }
@@ -114,7 +114,7 @@ namespace QLBanSach
                     string query5 = "select sach.TenSach, Theloai.TenTL, Tacgia.TenTG,DichGia.TenDG,NgonNgu.TenNN,Nhaxuatban.TenNXB, sach.giaban, series.tenseries "
                                  + " from sach,series, theloai, tacgia, dichgia, ngonngu,nhaxuatban, theloai_sach, tacgia_sach, dichgia_sach, ngonngu_sach where "
                                  + " sach.masach=theloai_sach.masach and theloai_sach.matl=theloai.matl and sach.masach=ngonngu_sach.masach and ngonngu_sach.mann=ngonngu.mann and sach.masach=dichgia_sach.masach and dichgia.madg=dichgia_sach.madg and sach.masach=tacgia_sach.masach and tacgia_sach.matg=tacgia.matg "
-                                 + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and series.tenseries ='" + texttim1.Text + "'";
+                                 + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and series.tenseries =N'" + texttim1.Text + "'";
                     dt4 = Program.da.readDatathroughAdapter(query5);
                     dataGridView1.DataSource = dt4;
                 }
@@ -130,7 +130,7 @@ namespace QLBanSach
                     string query6 = "select sach.TenSach, Theloai.TenTL, Tacgia.TenTG,DichGia.TenDG,NgonNgu.TenNN,Nhaxuatban.TenNXB, sach.giaban, series.tenseries "
                                  + " from sach,series, theloai, tacgia, dichgia, ngonngu,nhaxuatban, theloai_sach, tacgia_sach, dichgia_sach, ngonngu_sach where "
                                  + " sach.masach=theloai_sach.masach and theloai_sach.matl=theloai.matl and sach.masach=ngonngu_sach.masach and ngonngu_sach.mann=ngonngu.mann and sach.masach=dichgia_sach.masach and dichgia.madg=dichgia_sach.madg and sach.masach=tacgia_sach.masach and tacgia_sach.matg=tacgia.matg "
-                                 + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and dichgia.tendg ='" + texttim1.Text + "'";
+                                 + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and dichgia.tendg =N'" + texttim1.Text + "'";
                     dt5 = Program.da.readDatathroughAdapter(query6);
                     dataGridView1.DataSource = dt5;
                 }
@@ -146,7 +146,7 @@ namespace QLBanSach
                     string query7 = "select sach.TenSach, Theloai.TenTL, Tacgia.TenTG,DichGia.TenDG,NgonNgu.TenNN,Nhaxuatban.TenNXB, sach.giaban, series.tenseries "
                                  + " from sach,series, theloai, tacgia, dichgia, ngonngu,nhaxuatban, theloai_sach, tacgia_sach, dichgia_sach, ngonngu_sach where "
                                  + " sach.masach=theloai_sach.masach and theloai_sach.matl=theloai.matl and sach.masach=ngonngu_sach.masach and ngonngu_sach.mann=ngonngu.mann and sach.masach=dichgia_sach.masach and dichgia.madg=dichgia_sach.madg and sach.masach=tacgia_sach.masach and tacgia_sach.matg=tacgia.matg "
-                                 + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and nhaxuatban.tennxb ='" + texttim1.Text + "'";
+                                 + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and nhaxuatban.tennxb =N'" + texttim1.Text + "'";
                     dt6 = Program.da.readDatathroughAdapter(query7);
                     dataGridView1.DataSource = dt6;
                 }
@@ -189,7 +189,7 @@ namespace QLBanSach
                     string query9 = "select sach.TenSach, Theloai.TenTL, Tacgia.TenTG,DichGia.TenDG,NgonNgu.TenNN,Nhaxuatban.TenNXB, sach.giaban, series.tenseries "
                                  + " from sach,series, theloai, tacgia, dichgia, ngonngu,nhaxuatban, theloai_sach, tacgia_sach, dichgia_sach, ngonngu_sach where "
                                  + " sach.masach=theloai_sach.masach and theloai_sach.matl=theloai.matl and sach.masach=ngonngu_sach.masach and ngonngu_sach.mann=ngonngu.mann and sach.masach=dichgia_sach.masach and dichgia.madg=dichgia_sach.madg and sach.masach=tacgia_sach.masach and tacgia_sach.matg=tacgia.matg "
-                                 + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach ='" + texttim1.Text + "' " + " and theloai.tentl ='" + texttim2.Text + "'";
+                                 + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach =N'" + texttim1.Text + "' " + " and theloai.tentl =N'" + texttim2.Text + "'";
                     dt8 = Program.da.readDatathroughAdapter(query9);
                     dataGridView1.DataSource = dt8;
                 }
@@ -206,7 +206,7 @@ namespace QLBanSach
                     string query10 = "select sach.TenSach, Theloai.TenTL, Tacgia.TenTG,DichGia.TenDG,NgonNgu.TenNN,Nhaxuatban.TenNXB, sach.giaban, series.tenseries "
                                 + " from sach,series, theloai, tacgia, dichgia, ngonngu,nhaxuatban, theloai_sach, tacgia_sach, dichgia_sach, ngonngu_sach where "
                                 + " sach.masach=theloai_sach.masach and theloai_sach.matl=theloai.matl and sach.masach=ngonngu_sach.masach and ngonngu_sach.mann=ngonngu.mann and sach.masach=dichgia_sach.masach and dichgia.madg=dichgia_sach.madg and sach.masach=tacgia_sach.masach and tacgia_sach.matg=tacgia.matg "
-                                + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach ='" + texttim1.Text + "' " + " and tacgia.tentg ='" + texttim2.Text + "'";
+                                + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach =N'" + texttim1.Text + "' " + " and tacgia.tentg =N'" + texttim2.Text + "'";
                     dt9 = Program.da.readDatathroughAdapter(query10);
                     dataGridView1.DataSource = dt9;
                 }
@@ -223,7 +223,7 @@ namespace QLBanSach
                     string query11 = "select sach.TenSach, Theloai.TenTL, Tacgia.TenTG,DichGia.TenDG,NgonNgu.TenNN,Nhaxuatban.TenNXB, sach.giaban, series.tenseries "
                                  + " from sach,series, theloai, tacgia, dichgia, ngonngu,nhaxuatban, theloai_sach, tacgia_sach, dichgia_sach, ngonngu_sach where "
                                  + " sach.masach=theloai_sach.masach and theloai_sach.matl=theloai.matl and sach.masach=ngonngu_sach.masach and ngonngu_sach.mann=ngonngu.mann and sach.masach=dichgia_sach.masach and dichgia.madg=dichgia_sach.madg and sach.masach=tacgia_sach.masach and tacgia_sach.matg=tacgia.matg "
-                                 + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach ='" + texttim1.Text + "' " + " and ngonngu.tennn ='" + texttim2.Text + "'";
+                                 + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach =N'" + texttim1.Text + "' " + " and ngonngu.tennn =N'" + texttim2.Text + "'";
                     dt10 = Program.da.readDatathroughAdapter(query11);
                     dataGridView1.DataSource = dt10;
                 }
@@ -240,7 +240,7 @@ namespace QLBanSach
                     string query12 = "select sach.TenSach, Theloai.TenTL, Tacgia.TenTG,DichGia.TenDG,NgonNgu.TenNN,Nhaxuatban.TenNXB, sach.giaban, series.tenseries "
                                 + " from sach,series, theloai, tacgia, dichgia, ngonngu,nhaxuatban, theloai_sach, tacgia_sach, dichgia_sach, ngonngu_sach where "
                                 + " sach.masach=theloai_sach.masach and theloai_sach.matl=theloai.matl and sach.masach=ngonngu_sach.masach and ngonngu_sach.mann=ngonngu.mann and sach.masach=dichgia_sach.masach and dichgia.madg=dichgia_sach.madg and sach.masach=tacgia_sach.masach and tacgia_sach.matg=tacgia.matg "
-                                + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach ='" + texttim1.Text + "' " + " and series.tenseries ='" + texttim2.Text + "'";
+                                + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach =N'" + texttim1.Text + "' " + " and series.tenseries =N'" + texttim2.Text + "'";
                     dt11 = Program.da.readDatathroughAdapter(query12);
                     dataGridView1.DataSource = dt11;
                 }
@@ -257,7 +257,7 @@ namespace QLBanSach
                     string query14 = "select sach.TenSach, Theloai.TenTL, Tacgia.TenTG,DichGia.TenDG,NgonNgu.TenNN,Nhaxuatban.TenNXB, sach.giaban, series.tenseries "
                                  + " from sach,series, theloai, tacgia, dichgia, ngonngu,nhaxuatban, theloai_sach, tacgia_sach, dichgia_sach, ngonngu_sach where "
                                  + " sach.masach=theloai_sach.masach and theloai_sach.matl=theloai.matl and sach.masach=ngonngu_sach.masach and ngonngu_sach.mann=ngonngu.mann and sach.masach=dichgia_sach.masach and dichgia.madg=dichgia_sach.madg and sach.masach=tacgia_sach.masach and tacgia_sach.matg=tacgia.matg "
-                                 + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach ='" + texttim1.Text + "' " + " and dichgia.tendg ='" + texttim2.Text + "'";
+                                 + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach =N'" + texttim1.Text + "' " + " and dichgia.tendg =N'" + texttim2.Text + "'";
                     dt12 = Program.da.readDatathroughAdapter(query14);
                     dataGridView1.DataSource = dt12;
                 }
@@ -274,7 +274,7 @@ namespace QLBanSach
                     string query15 = "select sach.TenSach, Theloai.TenTL, Tacgia.TenTG,DichGia.TenDG,NgonNgu.TenNN,Nhaxuatban.TenNXB, sach.giaban, series.tenseries "
                                    + " from sach,series, theloai, tacgia, dichgia, ngonngu,nhaxuatban, theloai_sach, tacgia_sach, dichgia_sach, ngonngu_sach where "
                                    + " sach.masach=theloai_sach.masach and theloai_sach.matl=theloai.matl and sach.masach=ngonngu_sach.masach and ngonngu_sach.mann=ngonngu.mann and sach.masach=dichgia_sach.masach and dichgia.madg=dichgia_sach.madg and sach.masach=tacgia_sach.masach and tacgia_sach.matg=tacgia.matg "
-                                   + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach ='" + texttim1.Text + "' " + " and nhaxuatban.tennxb ='" + texttim2.Text + "'";
+                                   + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach =N'" + texttim1.Text + "' " + " and nhaxuatban.tennxb =N'" + texttim2.Text + "'";
                     dt14 = Program.da.readDatathroughAdapter(query15);
                     dataGridView1.DataSource = dt14;
                 }
@@ -294,7 +294,7 @@ namespace QLBanSach
                         string query16 = "select sach.TenSach, Theloai.TenTL, Tacgia.TenTG,DichGia.TenDG,NgonNgu.TenNN,Nhaxuatban.TenNXB, sach.giaban, series.tenseries "
                             + " from sach,series, theloai, tacgia, dichgia, ngonngu,nhaxuatban, theloai_sach, tacgia_sach, dichgia_sach, ngonngu_sach where "
                             + " sach.masach=theloai_sach.masach and theloai_sach.matl=theloai.matl and sach.masach=ngonngu_sach.masach and ngonngu_sach.mann=ngonngu.mann and sach.masach=dichgia_sach.masach and dichgia.madg=dichgia_sach.madg and sach.masach=tacgia_sach.masach and tacgia_sach.matg=tacgia.matg "
-                            + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach ='" + texttim1.Text + "' " + " and sach.namxb ='" + int.Parse(texttim2.Text) + "'";
+                            + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach =N'" + texttim1.Text + "' " + " and sach.namxb ='" + int.Parse(texttim2.Text) + "'";
                         dt15 = Program.da.readDatathroughAdapter(query16);
                         dataGridView1.DataSource = dt15;
                     }
@@ -338,7 +338,7 @@ namespace QLBanSach
                 string query17 = "select sach.TenSach, Theloai.TenTL, Tacgia.TenTG,DichGia.TenDG,NgonNgu.TenNN,Nhaxuatban.TenNXB, sach.giaban, series.tenseries "
                                 + " from sach,series, theloai, tacgia, dichgia, ngonngu,nhaxuatban, theloai_sach, tacgia_sach, dichgia_sach, ngonngu_sach where "
                                 + " sach.masach=theloai_sach.masach and theloai_sach.matl=theloai.matl and sach.masach=ngonngu_sach.masach and ngonngu_sach.mann=ngonngu.mann and sach.masach=dichgia_sach.masach and dichgia.madg=dichgia_sach.madg and sach.masach=tacgia_sach.masach and tacgia_sach.matg=tacgia.matg "
-                                + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach ='" + texttim1.Text + "' " + " and theloai.tentl ='" + texttim2.Text + "' " + " and tacgia.tentg ='" + texttim3.Text + "'";
+                                + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach =N'" + texttim1.Text + "' " + " and theloai.tentl =N'" + texttim2.Text + "' " + " and tacgia.tentg ='" + texttim3.Text + "'";
                 dt16 = Program.da.readDatathroughAdapter(query17);
                 dataGridView1.DataSource = dt16;
 
@@ -352,7 +352,7 @@ namespace QLBanSach
                 string query18 = "select sach.TenSach, Theloai.TenTL, Tacgia.TenTG,DichGia.TenDG,NgonNgu.TenNN,Nhaxuatban.TenNXB, sach.giaban, series.tenseries "
                                 + " from sach,series, theloai, tacgia, dichgia, ngonngu,nhaxuatban, theloai_sach, tacgia_sach, dichgia_sach, ngonngu_sach where "
                                 + " sach.masach=theloai_sach.masach and theloai_sach.matl=theloai.matl and sach.masach=ngonngu_sach.masach and ngonngu_sach.mann=ngonngu.mann and sach.masach=dichgia_sach.masach and dichgia.madg=dichgia_sach.madg and sach.masach=tacgia_sach.masach and tacgia_sach.matg=tacgia.matg "
-                                + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach ='" + texttim1.Text + "' " + " and ngonngu.tenn ='" + texttim2.Text + "' " + " and series.tenseries ='" + texttim3.Text + "'";
+                                + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach =N'" + texttim1.Text + "' " + " and ngonngu.tenn =N'" + texttim2.Text + "' " + " and series.tenseries ='" + texttim3.Text + "'";
                 dt17 = Program.da.readDatathroughAdapter(query18);
                 dataGridView1.DataSource = dt17;
 
@@ -366,7 +366,7 @@ namespace QLBanSach
                 string query19 = "select sach.TenSach, Theloai.TenTL, Tacgia.TenTG,DichGia.TenDG,NgonNgu.TenNN,Nhaxuatban.TenNXB, sach.giaban, series.tenseries "
                                + " from sach,series, theloai, tacgia, dichgia, ngonngu,nhaxuatban, theloai_sach, tacgia_sach, dichgia_sach, ngonngu_sach where "
                                + " sach.masach=theloai_sach.masach and theloai_sach.matl=theloai.matl and sach.masach=ngonngu_sach.masach and ngonngu_sach.mann=ngonngu.mann and sach.masach=dichgia_sach.masach and dichgia.madg=dichgia_sach.madg and sach.masach=tacgia_sach.masach and tacgia_sach.matg=tacgia.matg "
-                               + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach ='" + texttim1.Text + "' " + " and dichgia.tendg ='" + texttim2.Text + "' " + " and nhaxuatban.tennxb ='" + texttim3.Text + "'";
+                               + " and sach.manxb=nhaxuatban.manxb and sach.maseries=series.maseries and sach.tensach =N'" + texttim1.Text + "' " + " and dichgia.tendg =N'" + texttim2.Text + "' " + " and nhaxuatban.tennxb ='" + texttim3.Text + "'";
                 dt18 = Program.da.readDatathroughAdapter(query19);
                 dataGridView1.DataSource = dt18;
 

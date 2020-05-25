@@ -31,16 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelMenuButton = new System.Windows.Forms.Panel();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.panelIndexSubMenu = new System.Windows.Forms.Panel();
             this.btnLanguage = new System.Windows.Forms.Button();
             this.btnCategory = new System.Windows.Forms.Button();
             this.btnTranslator = new System.Windows.Forms.Button();
             this.btnAuthor = new System.Windows.Forms.Button();
             this.btnIndex = new System.Windows.Forms.Button();
-            this.panelStatisticsSubMenu = new System.Windows.Forms.Panel();
-            this.btnTrending = new System.Windows.Forms.Button();
-            this.btnRevenue = new System.Windows.Forms.Button();
-            this.btnStatistic = new System.Windows.Forms.Button();
             this.btnBook = new System.Windows.Forms.Button();
             this.btnCheckout = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -55,11 +52,10 @@
             this.pictureBoxClose = new System.Windows.Forms.PictureBox();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.labelTitle = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnStatistic = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelMenuButton.SuspendLayout();
             this.panelIndexSubMenu.SuspendLayout();
-            this.panelStatisticsSubMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelNav.SuspendLayout();
@@ -90,7 +86,6 @@
             this.panelMenuButton.Controls.Add(this.btnSearch);
             this.panelMenuButton.Controls.Add(this.panelIndexSubMenu);
             this.panelMenuButton.Controls.Add(this.btnIndex);
-            this.panelMenuButton.Controls.Add(this.panelStatisticsSubMenu);
             this.panelMenuButton.Controls.Add(this.btnStatistic);
             this.panelMenuButton.Controls.Add(this.btnBook);
             this.panelMenuButton.Controls.Add(this.btnCheckout);
@@ -101,6 +96,26 @@
             this.panelMenuButton.Size = new System.Drawing.Size(250, 690);
             this.panelMenuButton.TabIndex = 0;
             // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(20)))), ((int)(((byte)(55)))));
+            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.Location = new System.Drawing.Point(0, 655);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnSearch.Size = new System.Drawing.Size(229, 80);
+            this.btnSearch.TabIndex = 8;
+            this.btnSearch.Text = "   Tìm kiếm";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // panelIndexSubMenu
             // 
             this.panelIndexSubMenu.Controls.Add(this.btnLanguage);
@@ -108,7 +123,7 @@
             this.panelIndexSubMenu.Controls.Add(this.btnTranslator);
             this.panelIndexSubMenu.Controls.Add(this.btnAuthor);
             this.panelIndexSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelIndexSubMenu.Location = new System.Drawing.Point(0, 495);
+            this.panelIndexSubMenu.Location = new System.Drawing.Point(0, 335);
             this.panelIndexSubMenu.Name = "panelIndexSubMenu";
             this.panelIndexSubMenu.Size = new System.Drawing.Size(229, 320);
             this.panelIndexSubMenu.TabIndex = 6;
@@ -202,7 +217,7 @@
             this.btnIndex.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnIndex.Image = ((System.Drawing.Image)(resources.GetObject("btnIndex.Image")));
             this.btnIndex.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIndex.Location = new System.Drawing.Point(0, 415);
+            this.btnIndex.Location = new System.Drawing.Point(0, 255);
             this.btnIndex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIndex.Name = "btnIndex";
             this.btnIndex.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
@@ -212,76 +227,6 @@
             this.btnIndex.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnIndex.UseVisualStyleBackColor = true;
             this.btnIndex.Click += new System.EventHandler(this.btnIndex_Click);
-            // 
-            // panelStatisticsSubMenu
-            // 
-            this.panelStatisticsSubMenu.Controls.Add(this.btnTrending);
-            this.panelStatisticsSubMenu.Controls.Add(this.btnRevenue);
-            this.panelStatisticsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelStatisticsSubMenu.Location = new System.Drawing.Point(0, 255);
-            this.panelStatisticsSubMenu.Name = "panelStatisticsSubMenu";
-            this.panelStatisticsSubMenu.Size = new System.Drawing.Size(229, 160);
-            this.panelStatisticsSubMenu.TabIndex = 7;
-            // 
-            // btnTrending
-            // 
-            this.btnTrending.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(80)))));
-            this.btnTrending.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTrending.FlatAppearance.BorderSize = 0;
-            this.btnTrending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTrending.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrending.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnTrending.Image = ((System.Drawing.Image)(resources.GetObject("btnTrending.Image")));
-            this.btnTrending.Location = new System.Drawing.Point(0, 80);
-            this.btnTrending.Name = "btnTrending";
-            this.btnTrending.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnTrending.Size = new System.Drawing.Size(229, 80);
-            this.btnTrending.TabIndex = 8;
-            this.btnTrending.Text = "   Bán chạy";
-            this.btnTrending.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrending.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTrending.UseVisualStyleBackColor = false;
-            this.btnTrending.Click += new System.EventHandler(this.btnTrending_Click);
-            // 
-            // btnRevenue
-            // 
-            this.btnRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(80)))));
-            this.btnRevenue.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRevenue.FlatAppearance.BorderSize = 0;
-            this.btnRevenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRevenue.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnRevenue.Image = ((System.Drawing.Image)(resources.GetObject("btnRevenue.Image")));
-            this.btnRevenue.Location = new System.Drawing.Point(0, 0);
-            this.btnRevenue.Name = "btnRevenue";
-            this.btnRevenue.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnRevenue.Size = new System.Drawing.Size(229, 80);
-            this.btnRevenue.TabIndex = 7;
-            this.btnRevenue.Text = "   Doanh thu";
-            this.btnRevenue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRevenue.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRevenue.UseVisualStyleBackColor = false;
-            this.btnRevenue.Click += new System.EventHandler(this.btnRevenue_Click);
-            // 
-            // btnStatistic
-            // 
-            this.btnStatistic.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStatistic.FlatAppearance.BorderSize = 0;
-            this.btnStatistic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStatistic.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStatistic.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnStatistic.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistic.Image")));
-            this.btnStatistic.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStatistic.Location = new System.Drawing.Point(0, 175);
-            this.btnStatistic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnStatistic.Name = "btnStatistic";
-            this.btnStatistic.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
-            this.btnStatistic.Size = new System.Drawing.Size(229, 80);
-            this.btnStatistic.TabIndex = 3;
-            this.btnStatistic.Text = "    Thống kê";
-            this.btnStatistic.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnStatistic.UseVisualStyleBackColor = true;
-            this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
             // 
             // btnBook
             // 
@@ -471,25 +416,25 @@
             this.labelTitle.Text = "TRANG CHỦ";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnSearch
+            // btnStatistic
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(20)))), ((int)(((byte)(55)))));
-            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(0, 815);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnSearch.Size = new System.Drawing.Size(229, 80);
-            this.btnSearch.TabIndex = 8;
-            this.btnSearch.Text = "   Tìm kiếm";
-            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnStatistic.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStatistic.FlatAppearance.BorderSize = 0;
+            this.btnStatistic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStatistic.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatistic.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnStatistic.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistic.Image")));
+            this.btnStatistic.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStatistic.Location = new System.Drawing.Point(0, 175);
+            this.btnStatistic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStatistic.Name = "btnStatistic";
+            this.btnStatistic.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
+            this.btnStatistic.Size = new System.Drawing.Size(229, 80);
+            this.btnStatistic.TabIndex = 3;
+            this.btnStatistic.Text = "    Thống kê";
+            this.btnStatistic.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStatistic.UseVisualStyleBackColor = true;
+            this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
             // 
             // MainForm
             // 
@@ -511,7 +456,6 @@
             this.panelMenu.ResumeLayout(false);
             this.panelMenuButton.ResumeLayout(false);
             this.panelIndexSubMenu.ResumeLayout(false);
-            this.panelStatisticsSubMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelNav.ResumeLayout(false);
@@ -531,7 +475,6 @@
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button btnCheckout;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Button btnStatistic;
         private System.Windows.Forms.Button btnBook;
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Label labelTitle;
@@ -551,10 +494,8 @@
         private System.Windows.Forms.Button btnIndex;
         private System.Windows.Forms.Panel panelMenuButton;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panelStatisticsSubMenu;
-        private System.Windows.Forms.Button btnTrending;
-        private System.Windows.Forms.Button btnRevenue;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnStatistic;
     }
 }
 
