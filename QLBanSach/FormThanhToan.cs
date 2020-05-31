@@ -63,10 +63,13 @@ namespace QLBanSach
             //dataGridView1.Columns[3].Width = 100;
             //dataGridView1.Columns[4].Width = 150;
         }
+        List<Image> ilist;
         private void Populate()
         {
             ImageList imgs = new ImageList();
-            imgs.ImageSize = new Size(100,50);
+            ilist = new List<Image>();
+            imgs.ImageSize = new Size(100, 50);
+            //imgs.ImageSize = new Size(256, 150);
 
             string wanted_path = Path.GetDirectoryName(Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory()));
             wanted_path += "\\Barcode";
@@ -78,6 +81,7 @@ namespace QLBanSach
                 foreach(String path in paths)
                 {
                     imgs.Images.Add(Image.FromFile(path));
+                    ilist.Add(Image.FromFile(path));
                     listView1.Items.Add("", i++);
                 }
             }
@@ -117,14 +121,19 @@ namespace QLBanSach
             if (listView1.SelectedItems.Count > 0)
             {
                 var item = listView1.SelectedItems[0];
-                var img = item.ImageList.Images[item.ImageIndex];
+                //var img = item.ImageList.Images[item.ImageIndex];
+                var img = ilist[item.ImageIndex];
 
                 reader = new BarcodeReader();
                 var result = reader.Decode((Bitmap)img);
+                //pictureBox1.Image = img;
                 DataTable dtb;
                 if (result != null)
                 {
-                    string query = "SELECT * FROM SACH WHERE MaSach = " + result.Text;
+                    var info = result.Text.Split(new char[] { ';' });
+                    //Console.Write(info[0]);
+                    //string query = "SELECT * FROM SACH WHERE MaSach = " + result.Text;
+                    string query = "SELECT * FROM SACH WHERE MaSach = " + info[0];
                     dtb = Program.da.readDatathroughAdapter(query);
 
                     dataGridViewSearch.Rows.Clear();
@@ -251,6 +260,7 @@ namespace QLBanSach
         }
 
         bool skipTextChanged = false;
+        double change = -1;
         private void txtGiven_TextChanged(object sender, EventArgs e)
         {
             if (skipTextChanged)
@@ -268,7 +278,8 @@ namespace QLBanSach
 
 
                 txtGiven.Text = ToMoney(m);
-                labelChange.Text = ToMoney((Convert.ToDouble(given) - totalMoney));
+                change = Convert.ToDouble(given) - totalMoney;
+                labelChange.Text = ToMoney(change);
             }
             catch (Exception ex)
             {
@@ -288,6 +299,13 @@ namespace QLBanSach
 
         private void buttonFinish_Click(object sender, EventArgs e)
         {
+            //if (labelChange.Text)
+            if (change < 0)
+            {
+                MessageBox.Show("Số tiền khách đưa không đủ");
+                return;
+            }
+
             string query = "INSERT INTO HDBAN(NgayBan, MaNV) VALUES(GETDATE(), 1)";
             Program.da.executeQuery(new SqlCommand(query));
 

@@ -7,6 +7,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZXing;
@@ -18,12 +19,20 @@ namespace QLBanSach
         public Form1()
         {
             InitializeComponent();
-            //GenerateBarcode();
+            GenerateBarcode();
+            //string t = convertToUnSign3("ố là lá lã lạ xĩn chảo cạ nhà đ ư ơ ô");
+            //Console.Write(t);
         }
-
+        public static string convertToUnSign3(string s)
+        {
+            Regex regex = new Regex("\\p{IsCombiningDiacriticalMarks}+");
+            string temp = s.Normalize(NormalizationForm.FormD);
+            return regex.Replace(temp, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
+        }
         void GenerateBarcode()
         {
-            string query = "SELECT * FROM SACH";
+            string query = "SELECT s.MaSach,s.MaDSach,s.TenSach,s.Namxb,x.TenNXB, g.TenTG FROM SACH s, DAUSACH d, NHAXUATBAN x, TACGIA g WHERE s.MaDSach = d.MaDSACH AND s.MaNXB = x.MaNXB AND g.MaTG = d.MaTGChinh";
+            
             DataTable dtb = Program.da.readDatathroughAdapter(query);
 
             BarcodeWriter writer = new BarcodeWriter() { Format = BarcodeFormat.CODE_128 };
@@ -34,8 +43,10 @@ namespace QLBanSach
 
             foreach (DataRow row in dtb.Rows)
             {
-                i = writer.Write(row.ItemArray.ElementAt(0).ToString());
-                i.Save(wanted_path + row.ItemArray.ElementAt(0).ToString() + ".png", ImageFormat.Png);
+                string bc = row["MaSach"].ToString() + ";" + row["TenSach"].ToString() + ";" + row["Namxb"].ToString() + ";" + row["TenNXB"].ToString() + ";" + row["TenTG"].ToString();
+                bc = convertToUnSign3(bc);
+                i = writer.Write(bc);
+                i.Save(wanted_path + bc + ".png", ImageFormat.Png);
             }
         }
 
