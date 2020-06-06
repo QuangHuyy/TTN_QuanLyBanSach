@@ -15,9 +15,9 @@ namespace QLBanSach
         private static SqlDataAdapter adapter = new SqlDataAdapter();
         //public static string strConnString = "data source=DESKTOP-E06EJ47\\SQLEXPRESS01; " + "Integrated Security=SSPI ;" + "database=QuanLyBanSach";
         //Data Source = DESKTOP - 0CQQH02\SQLEXPRESS;Initial Catalog = QuanLyBanSach; Integrated Security = True
-        public static string strConnString = "data source=DESKTOP-MVRA3GT\\SQLEXPRESS; " + "Integrated Security=SSPI ;" + "database=QuanLyBanSach";
+        //public static string strConnString = "data source=DESKTOP-MVRA3GT\\SQLEXPRESS; " + "Integrated Security=SSPI ;" + "database=QuanLyBanSach";
+        public static string strConnString = "data source=DESKTOP-0CQQH02\\SQLEXPRESS; " + "Integrated Security=True ;" + "database=QuanLyBanSach";
        // public static string strConnString = "data source=DESKTOP-0CQQH02\\SQLEXPRESS; " + "Integrated Security=True ;" + "database=QuanLyBanSach";
-
         public void creatConn()
         {
             //222222
