@@ -101,13 +101,14 @@
             // dataGridViewDanhMuc
             // 
             this.dataGridViewDanhMuc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDanhMuc.Location = new System.Drawing.Point(356, 23);
+            this.dataGridViewDanhMuc.GridColor = System.Drawing.Color.Red;
+            this.dataGridViewDanhMuc.Location = new System.Drawing.Point(333, 23);
             this.dataGridViewDanhMuc.Name = "dataGridViewDanhMuc";
             this.dataGridViewDanhMuc.RowHeadersWidth = 51;
-            this.dataGridViewDanhMuc.Size = new System.Drawing.Size(386, 188);
+            this.dataGridViewDanhMuc.Size = new System.Drawing.Size(409, 188);
             this.dataGridViewDanhMuc.TabIndex = 23;
+            this.dataGridViewDanhMuc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDanhMuc_CellContentClick);
             this.dataGridViewDanhMuc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDanhMuc_CellContentClick);
-            this.dataGridViewDanhMuc.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDanhMuc_CellContentClick);
             // 
             // buttonThemDM
             // 
@@ -242,11 +243,14 @@
             // dataGridViewTheLoai
             // 
             this.dataGridViewTheLoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTheLoai.Location = new System.Drawing.Point(356, 19);
+            this.dataGridViewTheLoai.GridColor = System.Drawing.Color.Red;
+            this.dataGridViewTheLoai.Location = new System.Drawing.Point(333, 19);
             this.dataGridViewTheLoai.Name = "dataGridViewTheLoai";
             this.dataGridViewTheLoai.RowHeadersWidth = 51;
-            this.dataGridViewTheLoai.Size = new System.Drawing.Size(386, 215);
+            this.dataGridViewTheLoai.Size = new System.Drawing.Size(409, 215);
             this.dataGridViewTheLoai.TabIndex = 23;
+            this.dataGridViewTheLoai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTheLoai_CellContentClick);
+            this.dataGridViewTheLoai.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTheLoai_CellContentClick);
             // 
             // textBoxMaTL
             // 
