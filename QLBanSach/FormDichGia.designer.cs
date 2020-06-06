@@ -28,199 +28,157 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.hienThiDichGia = new System.Windows.Forms.Button();
-            this.textTenDG = new System.Windows.Forms.TextBox();
-            this.dataGridViewDichGia = new System.Windows.Forms.DataGridView();
-            this.textMaDG = new System.Windows.Forms.TextBox();
-            this.timDichGia = new System.Windows.Forms.Button();
-            this.themDichGia = new System.Windows.Forms.Button();
-            this.xoaDichGia = new System.Windows.Forms.Button();
-            this.suaDichGia = new System.Windows.Forms.Button();
-            this.groupBox3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDichGia)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBoxThem = new System.Windows.Forms.Button();
+            this.buttonReset = new System.Windows.Forms.Button();
+            this.buttonSua = new System.Windows.Forms.Button();
+            this.buttonTim = new System.Windows.Forms.Button();
+            this.buttonXoa = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox3
+            // label1
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox3.Controls.Add(this.groupBox1);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(0, 0);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox3.Size = new System.Drawing.Size(810, 561);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label1.Location = new System.Drawing.Point(105, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mã dịch giả: ";
             // 
-            // groupBox1
+            // label2
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.hienThiDichGia);
-            this.groupBox1.Controls.Add(this.textTenDG);
-            this.groupBox1.Controls.Add(this.dataGridViewDichGia);
-            this.groupBox1.Controls.Add(this.textMaDG);
-            this.groupBox1.Controls.Add(this.timDichGia);
-            this.groupBox1.Controls.Add(this.themDichGia);
-            this.groupBox1.Controls.Add(this.xoaDichGia);
-            this.groupBox1.Controls.Add(this.suaDichGia);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(2, 24);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(806, 535);
-            this.groupBox1.TabIndex = 13;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label2.Location = new System.Drawing.Point(100, 108);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Tên dịch giả: ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label5
+            // textBox1
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(20)))), ((int)(((byte)(55)))));
-            this.label5.Location = new System.Drawing.Point(27, 96);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 24);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Tên dịch giả";
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(208, 48);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(192, 26);
+            this.textBox1.TabIndex = 2;
             // 
-            // label6
+            // comboBox1
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(20)))), ((int)(((byte)(55)))));
-            this.label6.Location = new System.Drawing.Point(27, 28);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 24);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Mã dịch giả";
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(208, 105);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(192, 28);
+            this.comboBox1.TabIndex = 3;
+            this.comboBox1.Click += new System.EventHandler(this.comboBox1_Click);
             // 
-            // hienThiDichGia
+            // textBoxThem
             // 
-            this.hienThiDichGia.BackColor = System.Drawing.Color.LightSalmon;
-            this.hienThiDichGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hienThiDichGia.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.hienThiDichGia.Location = new System.Drawing.Point(689, 22);
-            this.hienThiDichGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.hienThiDichGia.Name = "hienThiDichGia";
-            this.hienThiDichGia.Size = new System.Drawing.Size(92, 43);
-            this.hienThiDichGia.TabIndex = 10;
-            this.hienThiDichGia.Text = "Reset";
-            this.hienThiDichGia.UseVisualStyleBackColor = false;
-            this.hienThiDichGia.Click += new System.EventHandler(this.hienThiDichGia_Click_1);
+            this.textBoxThem.BackColor = System.Drawing.Color.LightSalmon;
+            this.textBoxThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxThem.ForeColor = System.Drawing.Color.White;
+            this.textBoxThem.Location = new System.Drawing.Point(432, 40);
+            this.textBoxThem.Name = "textBoxThem";
+            this.textBoxThem.Size = new System.Drawing.Size(75, 40);
+            this.textBoxThem.TabIndex = 4;
+            this.textBoxThem.Text = "Thêm";
+            this.textBoxThem.UseVisualStyleBackColor = false;
+            this.textBoxThem.Click += new System.EventHandler(this.textBoxThem_Click);
             // 
-            // textTenDG
+            // buttonReset
             // 
-            this.textTenDG.Location = new System.Drawing.Point(155, 96);
-            this.textTenDG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textTenDG.Name = "textTenDG";
-            this.textTenDG.Size = new System.Drawing.Size(283, 29);
-            this.textTenDG.TabIndex = 3;
+            this.buttonReset.BackColor = System.Drawing.Color.LightSalmon;
+            this.buttonReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonReset.ForeColor = System.Drawing.Color.White;
+            this.buttonReset.Location = new System.Drawing.Point(623, 93);
+            this.buttonReset.Name = "buttonReset";
+            this.buttonReset.Size = new System.Drawing.Size(75, 40);
+            this.buttonReset.TabIndex = 5;
+            this.buttonReset.Text = "Reset";
+            this.buttonReset.UseVisualStyleBackColor = false;
+            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
-            // dataGridViewDichGia
+            // buttonSua
             // 
-            this.dataGridViewDichGia.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dataGridViewDichGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDichGia.Location = new System.Drawing.Point(31, 184);
-            this.dataGridViewDichGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridViewDichGia.Name = "dataGridViewDichGia";
-            this.dataGridViewDichGia.RowHeadersWidth = 51;
-            this.dataGridViewDichGia.RowTemplate.Height = 24;
-            this.dataGridViewDichGia.Size = new System.Drawing.Size(753, 264);
-            this.dataGridViewDichGia.TabIndex = 9;
-            this.dataGridViewDichGia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDichGia_CellContentClick_1);
+            this.buttonSua.BackColor = System.Drawing.Color.LightSalmon;
+            this.buttonSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSua.ForeColor = System.Drawing.Color.White;
+            this.buttonSua.Location = new System.Drawing.Point(432, 93);
+            this.buttonSua.Name = "buttonSua";
+            this.buttonSua.Size = new System.Drawing.Size(75, 40);
+            this.buttonSua.TabIndex = 6;
+            this.buttonSua.Text = "Sửa";
+            this.buttonSua.UseVisualStyleBackColor = false;
+            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
             // 
-            // textMaDG
+            // buttonTim
             // 
-            this.textMaDG.Location = new System.Drawing.Point(155, 25);
-            this.textMaDG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textMaDG.Name = "textMaDG";
-            this.textMaDG.Size = new System.Drawing.Size(283, 29);
-            this.textMaDG.TabIndex = 4;
+            this.buttonTim.BackColor = System.Drawing.Color.LightSalmon;
+            this.buttonTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTim.ForeColor = System.Drawing.Color.White;
+            this.buttonTim.Location = new System.Drawing.Point(529, 93);
+            this.buttonTim.Name = "buttonTim";
+            this.buttonTim.Size = new System.Drawing.Size(75, 40);
+            this.buttonTim.TabIndex = 7;
+            this.buttonTim.Text = "Tìm kiếm";
+            this.buttonTim.UseVisualStyleBackColor = false;
+            this.buttonTim.Click += new System.EventHandler(this.buttonTim_Click);
             // 
-            // timDichGia
+            // buttonXoa
             // 
-            this.timDichGia.BackColor = System.Drawing.Color.LightSalmon;
-            this.timDichGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timDichGia.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.timDichGia.Location = new System.Drawing.Point(576, 87);
-            this.timDichGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.timDichGia.Name = "timDichGia";
-            this.timDichGia.Size = new System.Drawing.Size(82, 43);
-            this.timDichGia.TabIndex = 8;
-            this.timDichGia.Text = "Tìm kiếm";
-            this.timDichGia.UseVisualStyleBackColor = false;
-            this.timDichGia.Click += new System.EventHandler(this.timDichGia_Click_1);
+            this.buttonXoa.BackColor = System.Drawing.Color.LightSalmon;
+            this.buttonXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonXoa.ForeColor = System.Drawing.Color.White;
+            this.buttonXoa.Location = new System.Drawing.Point(529, 40);
+            this.buttonXoa.Name = "buttonXoa";
+            this.buttonXoa.Size = new System.Drawing.Size(75, 40);
+            this.buttonXoa.TabIndex = 8;
+            this.buttonXoa.Text = "Xóa";
+            this.buttonXoa.UseVisualStyleBackColor = false;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
             // 
-            // themDichGia
+            // dataGridView1
             // 
-            this.themDichGia.BackColor = System.Drawing.Color.LightSalmon;
-            this.themDichGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.themDichGia.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.themDichGia.Location = new System.Drawing.Point(467, 23);
-            this.themDichGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.themDichGia.Name = "themDichGia";
-            this.themDichGia.Size = new System.Drawing.Size(82, 41);
-            this.themDichGia.TabIndex = 5;
-            this.themDichGia.Text = "Thêm";
-            this.themDichGia.UseVisualStyleBackColor = false;
-            this.themDichGia.Click += new System.EventHandler(this.themDichGia_Click_1);
-            // 
-            // xoaDichGia
-            // 
-            this.xoaDichGia.BackColor = System.Drawing.Color.LightSalmon;
-            this.xoaDichGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xoaDichGia.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.xoaDichGia.Location = new System.Drawing.Point(576, 22);
-            this.xoaDichGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.xoaDichGia.Name = "xoaDichGia";
-            this.xoaDichGia.Size = new System.Drawing.Size(82, 41);
-            this.xoaDichGia.TabIndex = 7;
-            this.xoaDichGia.Text = "Xóa";
-            this.xoaDichGia.UseVisualStyleBackColor = false;
-            this.xoaDichGia.Click += new System.EventHandler(this.xoaDichGia_Click_1);
-            // 
-            // suaDichGia
-            // 
-            this.suaDichGia.BackColor = System.Drawing.Color.LightSalmon;
-            this.suaDichGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suaDichGia.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.suaDichGia.Location = new System.Drawing.Point(465, 86);
-            this.suaDichGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.suaDichGia.Name = "suaDichGia";
-            this.suaDichGia.Size = new System.Drawing.Size(85, 43);
-            this.suaDichGia.TabIndex = 6;
-            this.suaDichGia.Text = "Sửa";
-            this.suaDichGia.UseVisualStyleBackColor = false;
-            this.suaDichGia.Click += new System.EventHandler(this.suaDichGia_Click_1);
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.Red;
+            this.dataGridView1.Location = new System.Drawing.Point(109, 180);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(589, 273);
+            this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // FormDichGia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SandyBrown;
-            this.ClientSize = new System.Drawing.Size(810, 561);
-            this.Controls.Add(this.groupBox3);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(773, 494);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.buttonXoa);
+            this.Controls.Add(this.buttonTim);
+            this.Controls.Add(this.buttonSua);
+            this.Controls.Add(this.buttonReset);
+            this.Controls.Add(this.textBoxThem);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Name = "FormDichGia";
-            this.Text = "FormDichGia";
+            this.Text = "Bảng Dịch Giả";
             this.Load += new System.EventHandler(this.FormDichGia_Load);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDichGia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -233,10 +191,20 @@
         private System.Windows.Forms.Button xoaDichGia;
         private System.Windows.Forms.Button suaDichGia;
         private System.Windows.Forms.Button themDichGia;
-        private System.Windows.Forms.TextBox textMaDG;
-        private System.Windows.Forms.TextBox textTenDG;
+        private System.Windows.Forms.TextBox textBoxMaDG;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox comboBoxTenDG;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button textBoxThem;
+        private System.Windows.Forms.Button buttonReset;
+        private System.Windows.Forms.Button buttonSua;
+        private System.Windows.Forms.Button buttonTim;
+        private System.Windows.Forms.Button buttonXoa;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
