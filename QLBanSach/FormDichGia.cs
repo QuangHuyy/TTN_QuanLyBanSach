@@ -141,7 +141,7 @@ namespace QLBanSach
             i = dataGridViewDichGia.CurrentRow.Index;
             textMaDG.Text = dataGridViewDichGia.Rows[i].Cells[0].Value.ToString();
             textTenDG.Text = dataGridViewDichGia.Rows[i].Cells[1].Value.ToString();
-        }
+        } 
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
