@@ -271,6 +271,20 @@ namespace QLBanSach
 
                 cm.ExecuteNonQuery();
 
+
+                cm.CommandText = "SuaTheLoai";
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.Parameters.Add(new SqlParameter("@TenTL", (comboBoxTenTL.Text)));
+               //  MessageBox.Show("tên thể loại mới :" + comboBoxTenTL.Text);
+                cm.Parameters.Add(new SqlParameter("@TenTL0", TL));
+               //  MessageBox.Show("tên thể loại cũ:" + TL);
+                cm.Parameters.Add(new SqlParameter("@TenDM", comboBoxDM_TL.Text));
+                // MessageBox.Show("tên danh mục mới: " + comboBoxDM_TL.Text);
+                cm.Parameters.Add(new SqlParameter("@TenDM0", DM));
+                //MessageBox.Show("tên danh mục cũ: " + DM);
+
+                cm.ExecuteNonQuery();
+
                 MessageBox.Show("Sửa thể loại thành công");
 
                 loadDataTL();
@@ -352,7 +366,7 @@ namespace QLBanSach
             loadDataDM();
             loadDataTL();
         }
-
+        ////
     }
 }
 
