@@ -42,8 +42,8 @@ namespace QLBanSach
             {
 
                 
-                string query = "select sach.TenSach, Theloai.TenTL, SERIES.TenSeries ,DICHGIA.TenDG,Tacgia.TenTG, Ngonngu.TenNN, (NH.ban * 100 / NH.nhap) ChatLuong from NGONNGU,NGONNGU_SACH,THELOAI_SACH,TACGIA_SACH,DICHGIA_SACH, theloai, tacgia,dichgia,SACH ,SERIES, (select sum(GDBAN.SoLuong) ban, sum(sach.SoLuong) nhap ,sach.MaSach from sach, HDBAN, GDBAN where hdban.MaHDB = gdban.MaHDB  and gdban.MaSach = sach.MaSach and year(HDBAN.NgayBan)= '" + int.Parse(textbanchay.Text) + "' group by Sach.MaSach) NH "
-                  + " where Nh.MaSach = sach.MaSach and Series.MaSeries = sach.MaSeries and sach.MaSach = THELOAI_SACH.MaSach and THELOAI_SACH.MaTL = THELOAI.MaTL and sach.MaSach = NGONNGU_SACH.MaSach and NGONNGU_SACH.MaNN = NGONNGU.MaNN and sach.MaSach = DICHGIA_SACH.MaSach and DICHGIA_SACH.MaDG = DICHGIA.MaDG and TACGIA.MaTG = TACGIA_SACH.MaTG and TACGIA_SACH.MaSach = sach.MaSach  and(NH.ban * 100 / NH.nhap) > 10";
+                string query = "select sach.TenSach, Theloai.TenTL, sach.tap ,DICHGIA.TenDG,Tacgia.TenTG, Ngonngu.TenNN, (NH.ban * 100 / NH.nhap) ChatLuong from NGONNGU,NGONNGU_SACH,THELOAI_SACH,TACGIA_SACH,DICHGIA_SACH, theloai, tacgia,dichgia,SACH , (select sum(GDBAN.SoLuong) ban, sum(sach.SoLuong) nhap ,sach.MaSach from sach, HDBAN, GDBAN where hdban.MaHDB = gdban.MaHDB  and gdban.MaSach = sach.MaSach and year(HDBAN.NgayBan)= '" + int.Parse(textbanchay.Text) + "' group by Sach.MaSach) NH "
+                  + " where Nh.MaSach = sach.MaSach and sach.MaSach = THELOAI_SACH.MaSach and THELOAI_SACH.MaTL = THELOAI.MaTL and sach.MaSach = NGONNGU_SACH.MaSach and NGONNGU_SACH.MaNN = NGONNGU.MaNN and sach.MaSach = DICHGIA_SACH.MaSach and DICHGIA_SACH.MaDG = DICHGIA.MaDG and TACGIA.MaTG = TACGIA_SACH.MaTG and TACGIA_SACH.MaSach = sach.MaSach  and(NH.ban * 100 / NH.nhap) > 10";
                 dt = Program.da.readDatathroughAdapter(query);
                 dataGridView1.DataSource = dt;
             }
