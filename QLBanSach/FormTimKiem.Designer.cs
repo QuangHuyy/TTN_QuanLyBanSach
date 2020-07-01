@@ -37,7 +37,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btntimkiem = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.listbox = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +46,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(72)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(43, 451);
+            this.dataGridView1.Location = new System.Drawing.Point(43, 398);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -67,14 +66,13 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Coral;
-            this.label3.Location = new System.Drawing.Point(89, 334);
+            this.label3.Location = new System.Drawing.Point(49, 336);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 25);
+            this.label3.Size = new System.Drawing.Size(209, 47);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Hiển thị";
+            this.label3.Text = "Hiển thị kết quả ";
             // 
             // texttim1
             // 
@@ -110,9 +108,9 @@
             // btntimkiem
             // 
             this.btntimkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btntimkiem.Location = new System.Drawing.Point(506, 159);
+            this.btntimkiem.Location = new System.Drawing.Point(457, 159);
             this.btntimkiem.Name = "btntimkiem";
-            this.btntimkiem.Size = new System.Drawing.Size(105, 28);
+            this.btntimkiem.Size = new System.Drawing.Size(154, 35);
             this.btntimkiem.TabIndex = 9;
             this.btntimkiem.Text = "TÌM KIẾM ";
             this.btntimkiem.UseVisualStyleBackColor = true;
@@ -129,17 +127,6 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "(tối đa 3)";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(40, 401);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(973, 18);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Nếu tìm theo 3 tiêu chí, tìm được theo ( tên sách, thể loại, tác giả ), (tên sách" +
-    ", ngôn ngữ, tập), ( tên sách, dịch giả, nhà xuất bản )";
-            // 
             // listbox
             // 
             this.listbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(20)))), ((int)(((byte)(55)))));
@@ -154,7 +141,8 @@
             "Tập",
             "Dịch giả",
             "Nhà xuất bản",
-            "Năm xuất bản"});
+            "Năm xuất bản",
+            "Tên Đầu Sách"});
             this.listbox.Location = new System.Drawing.Point(43, 76);
             this.listbox.Name = "listbox";
             this.listbox.Size = new System.Drawing.Size(255, 204);
@@ -167,7 +155,6 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1062, 643);
             this.Controls.Add(this.listbox);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btntimkiem);
             this.Controls.Add(this.label4);
@@ -196,7 +183,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btntimkiem;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckedListBox listbox;
     }
 }
